@@ -5,7 +5,9 @@
     "descripcion": "Explora la vibrante ciudad de Buenos Aires y disfruta del famoso tango argentino. Visita las impresionantes cataratas del Iguazú y maravíllate con la belleza natural de la Patagonia.",
     "titulo": "Descubre Argentina: Buenos Aires y Patagonia",
     "salida": "2024-09-15",
-    "duracion": "9 días"
+    "duracion": "9 días",
+    "hotel": "Hotel de la ciudad",
+    "img":"img/paises/Argentina.jpg"
   },
   "Brasil": {
     "nombre": "Brasil",
@@ -13,7 +15,10 @@
     "descripcion": "Descubre la icónica estatua del Cristo Redentor en Río de Janeiro. Relájate en las playas de Copacabana e Ipanema, y adéntrate en la selva amazónica para una aventura inolvidable.",
     "titulo": "Maravillas de Brasil: Río y Amazonas",
     "salida": "2024-10-15",
-    "duracion": "10 días"
+    "duracion": "10 días",
+    "hotel": "Hotel de la ciudad",
+    "img":"img/paises/Brasil.jpg"
+
   },
   "Ecuador": {
     "nombre": "Ecuador",
@@ -21,7 +26,9 @@
     "descripcion": "Explora la belleza de las Islas Galápagos y su increíble biodiversidad. Pasea por las históricas calles de Quito y sube al volcán Cotopaxi para unas vistas espectaculares.",
     "titulo": "Aventura en Ecuador: Galápagos y Quito",
     "salida": "2024-10-01",
-    "duracion": "10 días"
+    "duracion": "10 días",
+    "hotel": "Hotel de la ciudad",
+    "img":"img/paises/Ecuador.jpg"
   },
   "España": {
     "nombre": "España",
@@ -29,7 +36,9 @@
     "descripcion": "Visita la majestuosa Alhambra en Granada y el emblemático Parque Güell en Barcelona. Disfruta de la deliciosa gastronomía española y relájate en las playas de la Costa del Sol.",
     "titulo": "España Encantadora: Granada y Barcelona",
     "salida": "2024-09-20",
-    "duracion": "10 días"
+    "duracion": "10 días",
+    "hotel": "Hotel de la ciudad",
+    "img":"img/paises/España.jpg"
   },
   "Francia": {
     "nombre": "Francia",
@@ -37,7 +46,9 @@
     "descripcion": "Maravíllate con la Torre Eiffel en París y explora los encantadores viñedos de Burdeos. Sumérgete en la historia de la región de Normandía y relájate en la Riviera Francesa.",
     "titulo": "Romance en Francia: París y Burdeos",
     "salida": "2024-09-20",
-    "duracion": "10 días"
+    "duracion": "10 días",
+    "hotel": "Hotel de la ciudad",
+    "img":"img/paises/Francia.jpg"
   },
   "Italia": {
     "nombre": "Italia",
@@ -45,7 +56,9 @@
     "descripcion": "Admira la majestuosidad del Coliseo en Roma y el arte renacentista en Florencia. Disfruta de la romántica Venecia y deléitate con la exquisita cocina italiana.",
     "titulo": "Italia Clásica: Roma, Florencia y Venecia",
     "salida": "2024-10-01",
-    "duracion": "10 días"
+    "duracion": "10 días",
+    "hotel": "Hotel de la ciudad",
+    "img":"img/paises/Italia.jpg"
   },
   "Irlanda": {
     "nombre": "Irlanda",
@@ -53,7 +66,9 @@
     "descripcion": "Explora los verdes paisajes de la campiña irlandesa y visita los históricos castillos de Dublín. Disfruta de la música tradicional y la calidez de los pubs locales.",
     "titulo": "Encanto Irlandés: Dublín y la Campiña",
     "salida": "2024-08-25",
-    "duracion": "11 días"
+    "duracion": "11 días",
+    "hotel": "Hotel de la ciudad",
+    "img":"img/paises/Irlanda.jpg"
   },
   "Indonesia": {
     "nombre": "Indonesia",
@@ -61,7 +76,9 @@
     "descripcion": "Relájate en las hermosas playas de Bali y descubre los templos antiguos de Yogyakarta. Sumérgete en la cultura local y disfruta de la biodiversidad de sus selvas tropicales.",
     "titulo": "Indonesia Exótica: Bali y Yogyakarta",
     "salida": "2024-09-15",
-    "duracion": "10 días"
+    "duracion": "10 días",
+    "hotel": "Hotel de la ciudad",
+    "img":"img/paises/Indonesia.jpg"
   },
   "Japón": {
     "nombre": "Japón",
@@ -69,13 +86,17 @@
     "descripcion": "Visita el impresionante Monte Fuji y los templos históricos de Kioto. Disfruta de la modernidad de Tokio y deléitate con la cocina japonesa tradicional.",
     "titulo": "Tradición y Modernidad: Japón",
     "salida": "2024-09-15",
-    "duracion": "10 días"
+    "duracion": "10 días",
+    "hotel": "Hotel de la ciudad",
+    "img":"img/paises/Japón.jpg"
   },
   "Egipto": {
     "nombre": "Egipto",
     "titulo": "Misterios de Egipto",
     "salida":"2024-10-05 al",
     "duracion": "8 días",
+    "hotel": "Hotel de la ciudad",
+    "img":"img/paises/Egipto.jpg",
     "precio": 48000,
     "descripcion": "Explora las pirámides de Giza y los antiguos templos de Luxor. Navega por el río Nilo y descubre la rica historia de la civilización egipcia."
 },
@@ -84,6 +105,8 @@
     "titulo": "Australia Maravillosa",
     "salida": "2024-11-20",
     "duracion": "8 días",
+    "hotel": "Hotel de la ciudad",
+    "img":"img/paises/Australia.jpg",
     "precio": 70000,
     "descripcion": "Visita la Gran Barrera de Coral y la icónica Ópera de Sídney. Explora los paisajes únicos del Outback y disfruta de la vida silvestre australiana."
 },
@@ -92,6 +115,8 @@
     "titulo": "Safari en Sudáfrica",
     "salida": "2024-09-25",
     "duracion": "8 días",
+    "hotel": "Hotel de la ciudad",
+    "img":"img/paises/Sudáfrica.jpg",
     "precio": 65000,
     "descripcion": "Embárcate en un safari para ver los 'Big Five' y visita la histórica Ciudad del Cabo. Descubre la belleza natural del Parque Nacional Kruger y la Ruta Jardín."
 }

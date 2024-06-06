@@ -9,4 +9,4 @@ Until this part, the front-end development work was completed as a group.
 
 # 📁 Link to site
 
-👉: https://afcoiro.github.io/travelerChecker/
+👉: ...

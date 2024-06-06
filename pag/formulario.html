@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página para mostrar los datos recibidos de un formulario">
+  <link rel="stylesheet" href="/index.css">
+  <link rel="shortcut icon" href="./../favicon.png" type="image/x-icon">
+
+
+  <title>Datos del Formulario</title>
+  
+</head>
+
+<body>
+  <div class="container">
+    <h1>Datos recibidos del formulario</h1>
+    <div class="data-item">
+      <strong>Nombre:</strong>
+      <span id="nombre"></span>
+    </div>
+    <div class="data-item">
+      <strong>Email:</strong>
+      <span id="email"></span>
+    </div>
+    <div class="data-item">
+      <strong>Teléfono:</strong>
+      <span id="telefono"></span>
+    </div>
+    <div class="data-item">
+      <strong>Sitio web:</strong>
+      <span id="website"></span>
+    </div>
+    <div class="data-item">
+      <strong>Asunto:</strong>
+      <span id="asunto"></span>
+    </div>
+    <div class="data-item">
+      <strong>Mensaje:</strong>
+      <span id="mensaje"></span>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("nombre").textContent = params.get("nombre");
+    document.getElementById("email").textContent = params.get("email");
+    document.getElementById("telefono").textContent = params.get("telefono");
+    document.getElementById("website").textContent = params.get("website");
+    document.getElementById("asunto").textContent = params.get("asunto");
+    document.getElementById("mensaje").textContent = params.get("mensaje");
+  </script>
+  
+   <footer>
+    <section class="redesFooter containerWidth">
+        <a href="index.html" ><img class="imgLogoFooter" src="./../img/logo.png" alt="logo"></a>
+
+        <div>
+            <ul class="listSocial">
+                <li class="">
+                    <a class="linkSocialFoot" href="https://www.instagram.com/" target="_blank" rel="noopener" title="Visit our instagram page" aria-label="Visit our instagram page">
+                    <img class="linkSocialFootImg" src="../img/red-ig.png" alt="instagram icon"></a>
+                </li>
+                <li>
+                    <a class="linkSocialFoot" href="https://www.facebook.com/" target="_blank" rel="noopener" title="Visit our facebook page" aria-label="Visit our facebook page">
+                    <img class="linkSocialFootImg" src="../img/red-fb.png" alt="facebook icon"></a>
+                </li>
+                <li>
+                    <a class="linkSocialFoot" href="https://www.youtube.com/" target="_blank" rel="noopener" title="Visit our youtube page" aria-label="Visit our youtube page">
+                    <img class="linkSocialFootImg" src="../img/red-yt.png" alt="youtube icon"></a>
+                </li>
+                <li>
+                    <a class="linkSocialFoot" href="https://twitter.com" target="_blank" rel="noopener" title="Visit our twitter page" aria-label="Visit our twitter page">
+                    <img class="linkSocialFootImg" src="../img/red-x.png" alt="twitter icon"></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="menuFooter">
+        <div>
+            <h4> Atención al cliente </h4>
+            <h5> 0810.220.1309 </h5>
+            <p> Lunes a viernes de 10 a 21 h <br> Sábados de 10 a 16 h </p>
+        </div>
+
+        <div>
+            <h4> Ventas </h4>
+            <h5> 0810.220.1031 </h5>
+            <a href="#wapp"><h5> 0810.220.1031 </h5></a>
+            <p> Lunes a domingos y feriados de 9 a 23 h </p>
+        </div>
+        <div> 
+            <h4>Mapa del sitio</h4>                    
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pag/search.html">Viajá</a></li>
+                    <li><a href="pag/contact.html">Contacto</a></li>
+                    <li><a href="/pag/session.html">Iniciar sesión</a></li>
+                </ul>
+    </section>
+</footer>
+</body>
+
+</html>
+
