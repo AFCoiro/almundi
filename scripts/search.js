@@ -1,20 +1,20 @@
 let containerCardTrip = document.getElementsByClassName("containerCardTrip");
 
 //consumiendo api https://restcountries.com/
-const apiUrl = 'https://restcountries.com/v3.1/all';
-const paisesSeleccionados = ['Argentina', 'Brasil', 'Ecuador', 'España', 'Francia', 'Italia', 'Irlanda', 'Indonesia', 'Japón', 'Egipto', 'Australia', 'Sudáfrica'];
+// const apiUrl = 'https://restcountries.com/v3.1/all';
+// const paisesSeleccionados = ['Argentina', 'Brasil', 'Ecuador', 'España', 'Francia', 'Italia', 'Irlanda', 'Indonesia', 'Japón', 'Egipto', 'Australia', 'Sudáfrica'];
 const jsonUrl = '../../tours.json';
 /*llamado a una api externa y a un json interno*/
 async function ProcesarDatos() {
   try {
-    const datosApi = await fetch(apiUrl);
-    const datosA = await datosApi.json();
-    const paisesFiltrados = datosA.filter(pais => paisesSeleccionados.includes(pais.translations.spa.common));
+    // const datosApi = await fetch(apiUrl);
+    // const datosA = await datosApi.json();
+    // const paisesFiltrados = datosA.filter(pais => paisesSeleccionados.includes(pais.translations.spa.common));
     const datosJson = await fetch(jsonUrl);
     const datosJ = await datosJson.json();
-
-    fnMostrarPaises(paisesFiltrados, datosJ);
-    console.log(paisesFiltrados);
+    // fnMostrarPaises(paisesFiltrados, datosJ);
+    fnMostrarPaises(datosJ);
+    // console.log(paisesFiltrados);
     console.log(datosJ);
 
   } catch (error) {
@@ -23,29 +23,41 @@ async function ProcesarDatos() {
 }
 ProcesarDatos();
 /*los datos guardados los usamos para mostrarlos en las cards de productos*/
-function fnMostrarPaises(paisA, paisJ) {
-  paisA.forEach(pais => {
-    let country = pais.translations.spa.common;
-    let capital = pais.capital;
-    let bandera = pais.flag;
-    let mapa = pais.maps.googleMaps;
-    let paisInfo = paisJ[country];
+// function fnMostrarPaises(paisA, paisJ) {
+
+function fnMostrarPaises(paises) {
+  paises.forEach(pais => {
+    // let country = pais.translations.spa.common;
+    // let capital = pais.capital;
+    // let bandera = pais.flag;
+    //let mapa = pais.maps.googleMaps;
+    //let paisInfo = paises[country];
+    let nombre = pais.nombre;
+    let precio = pais.precio;
+    let descripcion = pais.descripcion;
+    let titulo = pais.titulo;
+    let salida = pais.salida;
+    let embarque = pais.embarque;
+    let duracion = pais.duracion;
+    let destinos = pais.destinos;
+    let hotel = pais.hotel;
+    let img = pais.img;
 
     const cardsTrip = document.createElement("div");
     cardsTrip.setAttribute('class', 'cardsTrip');
     cardsTrip.innerHTML = `
         <div>
-          <img class="imgCardTrip" src="./../img/paises/${country}.jpg" alt="Imagen de ${country}">
+          <img class="imgCardTrip" src="${img}" alt="Imagen de ${nombre}">
         </div>
         <a class="linkCardTrip" href="travels.html" target="_blank">
           <div>
-            <h3>${bandera} ${country}</h3>
-            <h4>${paisInfo.duracion}</h4>
-            <p>Vuelo + Hotel ${paisInfo.titulo}</p>
+            <h3>${nombre}</h3>
+            <h4>${duracion}</h4>
+            <p>Vuelo desde ${embarque} + ${hotel} - ${titulo} por ${destinos} </p>
           </div>
           <div>
             <h4>Precio por persona desde</h4>
-            <h2>$${paisInfo.precio}</h2>
+            <h2>$${precio}</h2>
             <p>Incluye impuestos, tasas y cargos</p>
           </div>
         </a>
@@ -58,16 +70,16 @@ function fnMostrarPaises(paisA, paisJ) {
           capital: capital,
           bandera: bandera,
           mapa: mapa,
-          imagen: `./../img/paises/${country}.jpg`,
-          descripcion: paisInfo.descripcion,
-          precio: paisInfo.precio,
-          titulo: paisInfo.titulo,
-          salida: paisInfo.salida,
-          duracion: paisInfo.duracion,
+          imagen: img,
+          descripcion: descripcion,
+          precio: precio,
+          titulo: titulo,
+          salida: salida,
+          duracion: duracion,
         };
         localStorage.setItem('infoPais', JSON.stringify(infoPaisGuardado));
       });
-  
+
       containerCardTrip[0].append(cardsTrip);
     });
   }
@@ -101,9 +113,17 @@ document.addEventListener('DOMContentLoaded', function() {
         <h3>👤👤2 pasajeros,🛏️ 1 habitación</h3>
         <h3>Precio total - 2 pasajeros: <span>$${infoPaisesGuardados.precio}</span></h3>
         <a href="contact.html" class="botonContacto">Consultar</a>
-        
+
     </section>
 </div>
     `;
   }
 });
+
+
+
+
+
+
+
+
