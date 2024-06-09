@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../index.css">
-    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="../css/contact.css">
 
     <link rel="shortcut icon" href="./../favicon.png" type="image/x-icon">
     
@@ -36,55 +36,42 @@
     <main class="contactoMain">
       <h2>Formulario de contacto</h2>
 
-        <form id="formContact"  class="formContact" method="GET" action="/pag/formulario-recibido.html">       
-
-            <p class="formP">
-              <label for="nombre" class="colocar_nombre">Nombre
+      <form id="formContact" class="formContact" method="GET" action="/pag/formulario-recibido.html">       
+        <fieldset>
+            <legend hidden>Contacto</legend>
+            
+            <label for="nombre" class="colocar_nombre formLabel">Nombre
                 <span class="obligatorio">*</span>
-              </label>
-                <input type="text" name="nombre" id="nombre" required placeholder="Escribe tu nombre">
-            </p>
-          
-            <p class="formP">
-              <label for="email" class="colocar_email">Email
+            </label>
+            <input type="text" name="nombre" id="nombre" class="formInput" required placeholder="Escribe tu nombre">
+            
+            <label for="email" class="colocar_email formLabel">Email
                 <span class="obligatorio">*</span>
-              </label>
-                <input type="email" name="email" id="email" required placeholder="Escribe tu Email">
-            </p>
+            </label>
+            <input type="email" name="email" id="email" class="formInput" required placeholder="Escribe tu Email">
+            
+            <label for="telefono" class="colocar_telefono formLabel">Teléfono
+            </label>
+            <input type="tel" name="telefono" id="telefono" class="formInput" placeholder="Escribe tu teléfono">
+            
+            <label for="asunto" class="colocar_asunto formLabel">Asunto
+                <span class="obligatorio">*</span>
+            </label>
+            <input type="text" name="asunto" id="asunto" class="formInput" required placeholder="Escribe un asunto">
+            
+            <label for="mensaje" class="colocar_mensaje formLabel">Mensaje
+                <span class="obligatorio">*</span>
+            </label>
+            <textarea name="mensaje" class="texto_mensaje" id="mensaje" required placeholder="Deja aquí tu comentario..."></textarea>
+        </fieldset>
         
-            <p class="formP">
-              <label for="telefone" class="colocar_telefono">Teléfono
-              </label>
-                <input type="tel" name="telefono" id="telefono" placeholder="Escribe tu teléfono">
-            </p>    
-          
-            <p class="formP">
-              <label for="website" class="colocar_website">Sitio web
-              </label>
-                <input type="url" name="website" id="website" placeholder="Escribe la URL de tu web">
-            </p>    
-          
-            <p class="formP">
-              <label for="asunto" class="colocar_asunto">Asunto
-                <span class="obligatorio">*</span>
-              </label>
-                <input type="text" name="asunto" id="asunto" required placeholder="Escribe un asunto">
-            </p class="formP">    
-          
-            <p class="formP">
-              <label for="mensaje" class="colocar_mensaje">Mensaje
-                <span class="obligatorio">*</span>
-              </label>                     
-                <textarea name="mensaje" class="texto_mensaje" id="mensaje" requiredplaceholder="Deja aquí tu comentario..."></textarea> 
-              </p>                    
-          
-            <button type="submit" name="enviar_formulario" id="enviar" class="botonEnviar">Enviar</button>
-
-            <p class="aviso">
-              <span class="obligatorio"> * </span>los campos son obligatorios.
-            </p>          
+        <button type="submit" id="enviar" class="botonEnviar">Enviar</button>
+    
+        <p class="aviso">
+            <span class="obligatorio"> * </span>los campos son obligatorios.
+        </p>          
         <p id="warnings" style="color: red;"></p>
-      </form>
+    </form>
 
     </main>
     
@@ -139,6 +126,6 @@
 
     
 </body>
-  <script src="./scripts/contact.js"></script>
+  <script src="../scripts/contact.js"></script>
     
 </html>

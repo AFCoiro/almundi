@@ -69,22 +69,30 @@
   background:#003366a9;
   width: 40%;
   padding: auto;
-
   border: 1px solid #ddd;
   border-radius: 1rem;
 
 }
+fieldset{
+  border: none;
+}
+.formContact fieldset{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-.formContact p,input{
+.formLabel,.formInput{
       margin: auto;
       padding: 1rem;
-      color: rgb(255, 255, 255);
+      color: black;
       width: 100%;
-        max-width: 400px;
+      max-width: 400px;
 
 }
 
-input{
+fieldset .formInput{
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -93,12 +101,10 @@ input{
     transition: all 0.3s ease;
 }
 
-input:focus{
+fieldset .formInput:focus{
   border-color: #007BFF;
   box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
 }
-
-
 .texto_mensaje {
   width: 100%;
   height:100%;
@@ -108,25 +114,23 @@ input:focus{
   border-radius: 5px;
   resize: vertical;
   max-width: 400px;
- 
 }
 
 .botonEnviar {
-  align-self: center;
   background-color: #003366;
   border-radius: 12px;
   box-shadow: 0.5px 0.5px 0.5px rgb(206, 206, 206);
   transition: box-shadow 1s;
   padding: 1rem;
   margin-top: 1rem;
-  color: #b9b9b9;
+  color: #e9e9e9;
   font-weight: 500;
   transition: 0.5s;
   width: fit-content;
 }
 
 .botonEnviar:hover {
-  background-color: #0c0cff;
+  background-color: #00458a;
   color: #ffffff;
 
 }

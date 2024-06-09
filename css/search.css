@@ -91,14 +91,43 @@
     background-size: cover;
     border-radius: 12px 12px 0 0;
 }
+.contImgCard{
+    position: relative;
+}
+.cardPais{
+    background-color: orangered;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    color:white;
+    font-weight: 600;
+    padding: 5px;
+    border-radius: 0 8px 0 8px;
+}
+
+
 .linkCardTrip{
     height: 100%;
+    width: 100%;
     padding:15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align:start ;
 }
 .linkCardTrip div:first-child{
     border-bottom:1px solid  rgb(206, 206, 206);
     padding-bottom:15px;
+}
+
+.linkCardTrip h3{
+    font-size: 24px;
+}
+.linkCardTrip h4{
+    color:#545962;
+    font-weight: 500;
+}
+.linkCardTrip h2{
+    color: orangered;
+
 }

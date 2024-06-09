@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const nombre = document.getElementById("nombre");
   const email = document.getElementById("email");
   const telefono = document.getElementById("telefono");
-  const website = document.getElementById("website");
   const asunto = document.getElementById("asunto");
   const mensaje = document.getElementById("mensaje");
 
