@@ -3,8 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const nombre = document.getElementById("nombre");
   const email = document.getElementById("email");
   const telefono = document.getElementById("telefono");
-  const asunto = document.getElementById("asunto");
-  const mensaje = document.getElementById("mensaje");
+
 
   form.addEventListener("submit", e => {
     e.preventDefault();
@@ -14,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     form.submit();
   });
+  
 
   //FUNCION PARA VALIDAR EL FORM
   function validateForm() {
@@ -44,3 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+/*       formulario recibido      */
+
+const params = new URLSearchParams(window.location.search);
+document.getElementById("nombre").textContent = params.get("nombre");
+document.getElementById("email").textContent = params.get("email");
+document.getElementById("telefono").textContent = params.get("telefono");

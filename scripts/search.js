@@ -1,14 +1,14 @@
 let containerCardTrip = document.getElementsByClassName("containerCardTrip");
 
+
 const jsonUrl = '../../tours.json';
-/*llamado a una api externa y a un json interno*/
+/*llamado a un json interno*/
 async function ProcesarDatos() {
   try {
 
     const datosJson = await fetch(jsonUrl);
     const datosJ = await datosJson.json();
     fnMostrarPaises(datosJ);
-    // console.log(paisesFiltrados);
     console.log(datosJ);
 
   } catch (error) {
@@ -113,18 +113,23 @@ document.addEventListener('DOMContentLoaded', function() {
           <h3>📅Salida: ${infoPaisesGuardados.salida}</h3>
           <h3>👤👤2 pasajeros,🛏️ 1 habitación</h3>
           <h3>Precio total - 2 pasajeros: <span>$${infoPaisesGuardados.precio}</span></h3>
-          <a href="contact.html" class="botonContacto">Consultar</a>
+          <a href="contact.html" class="botonContacto" id="btnContact">Consultar</a>
       </section>
 
     </div>
     `;
+  
+    
+
   }
-});
 
+  }
+);
 
-
-
-
-
-
-
+      /*⬇⬇⬇⬇⬇⬇LLENAR FORMULARIO CON INFO DE TRAVELS⬇⬇⬇⬇⬇*/
+// let btnContact = document.getElementById("btnContact");
+// let asunto = document.getElementById("asunto");
+// btnContact.addEventListener('click', function () {
+//   asunto.value = `Interes en ${infoPaisesGuardados.titulo} para el ${infoPaisesGuardados.salida}`;
+//   console.log(`Interes en ${infoPaisesGuardados.titulo} para el ${infoPaisesGuardados.salida}`);
+// });
