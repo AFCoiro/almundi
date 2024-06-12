@@ -122,14 +122,24 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
   }
-
+  const btnContact = document.getElementById("btnContact");
+  
+  btnContact.addEventListener('click', function () {
+    localStorage.setItem('asunto',`Reserva de paquete a ${infoPaisesGuardados.nombre} el ${infoPaisesGuardados.salida}`);
+    console.log('asunto',`Reserva de paquete a ${infoPaisesGuardados.nombre} el ${infoPaisesGuardados.salida}`);
+  });
   }
 );
 
       /*⬇⬇⬇⬇⬇⬇LLENAR FORMULARIO CON INFO DE TRAVELS⬇⬇⬇⬇⬇*/
-// let btnContact = document.getElementById("btnContact");
-// let asunto = document.getElementById("asunto");
-// btnContact.addEventListener('click', function () {
-//   asunto.value = `Interes en ${infoPaisesGuardados.titulo} para el ${infoPaisesGuardados.salida}`;
-//   console.log(`Interes en ${infoPaisesGuardados.titulo} para el ${infoPaisesGuardados.salida}`);
-// });
+
+      document.addEventListener('DOMContentLoaded', function () {
+        let asunto = document.getElementById('asunto');
+        let storedAsunto = localStorage.getItem('asunto');
+        if (storedAsunto) {
+          asunto.value = storedAsunto;
+          asunto.disabled ="disabled";
+          console.log(storedAsunto);
+          localStorage.removeItem('asunto'); 
+        }});
+          // Limpiar el valor almacenado

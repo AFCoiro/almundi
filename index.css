@@ -21,8 +21,8 @@ p{
     color: #545962;
 }
 main{
-    margin-top: 8vh;
-    padding-bottom: 150px;
+    margin-top: 15vh;
+    padding-bottom: 10%;
 }
 .containerWidth{
     padding:0 5%;
@@ -69,12 +69,11 @@ header{
 footer{
 text-align: center;
   background-color: #003366;
-  position: absolute;
   width: 100%;
   padding: 40px 20px;
   color:white;
   margin-top: auto; /* Ensure footer stays at the bottom */
-
+  bottom: 0%;
 }
 .redesFooter{
 height: 100px;
