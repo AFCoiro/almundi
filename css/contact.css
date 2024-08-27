@@ -15,32 +15,6 @@
   background-color: #003366;
   color: #ffffff;
 }
-/* Nosotros section*/
-.nosotrosSection h2 {
-  margin-top: 10px;
-  font-size: 2.5em;
-  color: #003366;
-  text-align:center;
-}
-
-.nosotrosSection{
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-}
-.nosotrosSection .content {
-  display: none;
-  padding: 10px;
-  text-align: center;
-}
-
-.nosotrosSection .content.active {
-  display: flex;
-}
-.arrow-downImg{
- align-items: center;
-}
-
 
 /* Form Section */
 .formSection {

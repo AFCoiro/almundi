@@ -1,0 +1,79 @@
+.usHero{
+    height: 150px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.usHeroImg{
+    height: auto;      
+    width: 100%;       
+    position: absolute; 
+    top: 40%;                 
+    transform: translate(-50%,-50%); 
+    object-fit: cover; 
+  }
+  .usHeroTittleDiv{
+    position: absolute; 
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    padding-top: 30px;
+    color:white;
+    text-shadow: 1px 1px 3px black;
+  }
+  .usHeroTittle{
+    font-size: 30px;
+  }
+
+  /*4*/
+/*PAG. NOSOTROS--------------------------------------------------------------------------------------------------------------------------------*/
+/*4*/
+
+
+.contact {
+    text-align: right;
+}
+
+.contact p {
+    margin: 0;
+    font-size: 12px;
+}
+
+.contact a {
+    text-decoration: none;
+    color: #0073e6;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.attention {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.cards h2 {
+    color:#f74008;
+}
+
+.cards p {
+    color: #555;
+}
