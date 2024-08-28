@@ -1,0 +1,546 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #f2f4f5;
+    position:relative;
+    min-height: 100vh;
+}
+a{
+    text-decoration: none;
+    color:#f74008;
+}
+ul {
+    list-style: none;
+}
+p{
+    color: #545962;
+}
+main{
+    margin-top: 15vh;
+    padding-bottom: 10%;
+}
+.containerWidth{
+    padding:0 5%;
+}
+
+/*NAV---------------------------------------------------*/
+header{
+    position: fixed;
+    top: 0%;
+    width: 100vw;
+    height: 15vh;
+    background-color:#ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 900;
+    z-index: 1;
+}
+.topHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 7vh;
+    padding-top: 1vh;
+}
+
+
+#navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:5%;
+    height: 8vh;
+
+}
+.topHeader a, #navbar a{
+    color:#f84008;
+    font-weight: 800;
+}
+
+.topHeader {
+    background-color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imgLogo {
+    height: 25px;
+    filter: invert(39%) sepia(82%) saturate(5672%) hue-rotate(360deg) brightness(101%) contrast(95%);
+}
+
+.navbar a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+/*Footer --------------------------------------------------*/
+footer{
+text-align: center;
+  background-color: #003366;
+  width: 100%;
+  padding: 40px 20px;
+  color:white;
+  margin-top: auto; /* Ensure footer stays at the bottom */
+  bottom: 0%;
+}
+.redesFooter{
+height: 100px;
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+align-items: flex-end;
+padding-bottom: 30px;
+}
+.imgLogoFooter{
+    width: 128px;
+}
+.linkSocialFootImg{
+    width: 30px;
+    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(183deg) brightness(106%) contrast(101%);
+
+}
+.menuFooter{
+    color: #ffffff;
+    border-top: 1px solid white ;
+    padding: 30px 0 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap:10%;
+}
+.menuFooter h4{
+    font-size: 18px;
+    font-weight: 500;
+}
+.menuFooter h5{ 
+    font-size: 25px;
+    font-weight: 600;
+}
+.menuFooter p, .menuFooter a{
+    color: #ffffff;
+    font-weight: 300;
+}
+.menuFooter li a{
+    color: white;
+}
+
+/*1*/
+/*MAIN--------------------------------------------------------------------------*/
+/*index seccion herobanner*/
+
+
+
+.heroBanner{
+    background-image: url("./img/travelHero1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 85vh;
+    width: auto;
+}
+.h2HeroBanner{
+    font-size: 100px;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:#f74008;
+    text-shadow: 1px 1px 3px black;
+}
+.arrow-down{
+    width: 100%;
+    height: 70px;
+    filter: invert(32%) sepia(25%) saturate(4928%) hue-rotate(353deg) brightness(105%) contrast(107%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-behavior: smooth;
+}
+.arrow-downImg{
+    width: 50px;
+}
+
+/*index seccion 2------------------------------------------------------------------*/
+#anchor{
+    height: 100px;
+}
+.section2{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin-top: 100px;
+}
+.sub2div1{
+  grid-column: 1/6;
+  grid-row: 1;
+  color:#003366;
+}
+.sub2div2{
+    grid-column: 7/13;
+    grid-row: 1;
+}
+.sub2div2 img{
+    width:100%;
+    background-size:contain;
+}
+.sub2div1 h2{
+    font-size: 64px;
+}
+.sub2div1 h2:first-child{
+    color:#003366;
+    font-size: 35px;
+    font-family: "Permanent Marker", cursive;
+}
+/*sec background imagen azul--------------------------------------------------------*/
+.secBackImg{
+    background-image: url("https://es.tourismpanama.com/includes/client_public/assets/redesign_assets/blue-bg-burst-parallax.jpg");
+    width:100%;
+    height:90vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    margin-top: 50px;
+}
+.secBackImg h3:first-child{
+    font-family: "Permanent Marker", cursive;
+    color: #ffffff;
+    font-size: 40px;
+    line-height: 1em;
+}
+.secBackImg h3:nth-child(2){
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 100px;
+    letter-spacing: 6px;
+    font-weight: 600;
+}
+.listSocial{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:1em;
+}
+.linkSocialImg{
+    width: 50px;
+    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(183deg) brightness(106%) contrast(101%);
+}
+
+/*img promociones-----------------------------------------------*/
+
+.secImg{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:5%;
+    width: 100%;
+}
+.secImg a{
+    width:40%;
+}
+.imgPromo{
+    border-radius: 30px;
+    margin-top: 50px;
+    width: 100%;
+    }
+    
+#secImg h4{
+    padding-top: 32px;
+    text-align: center;
+    font-size: 32px;
+}
+/*section cards**********************************/
+.sectionCards{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+.subSectionCards{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+}
+
+.subSectionCards .cards{
+    max-width: 20%;
+}
+.cards{
+    text-align: center;
+    background-color: #ffffff;
+    border: solid 1px #d6d6d6;
+    border-radius: 10px;
+
+    padding: 15px;
+
+}
+.cards h3{
+    padding-bottom: 10px;
+}
+
+
+/*****************************media querys***************************/
+
+
+@media (max-width: 768px){
+/*NAV---------------------------------------------------*/
+header{
+    position: fixed;
+}
+.topHeader{
+    padding-top: 2vh;
+}
+
+#navbar{
+    height: 8vh;
+
+}
+
+/*Footer --------------------------------------------------*/
+
+.redesFooter{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+}
+.imgLogoFooter{
+    width: 128px;
+}
+.linkSocialFootImg{
+    padding-top:15px;
+    width: 40px;
+}
+.menuFooter{
+    padding-top: 40px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.menuFooter div:last-child{
+    display: none;
+}
+/*MAIN HEROBANNER***********************************/
+/*MAIN--------------------------------------------------------------------------*/
+/*index seccion herobanner*/
+
+
+
+.heroBanner{
+    background-image: url("./img/travelHero1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 85vh;
+    width: auto;
+}
+.h2HeroBanner{
+    font-size: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Permanent Marker", cursive;
+}
+.arrow-down{
+    width: 100%;
+    height: 70px;
+    filter: invert(32%) sepia(25%) saturate(4928%) hue-rotate(353deg) brightness(105%) contrast(107%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+.arrow-downImg{
+    width: 50px;
+}
+/*LINK SEC2*************/
+.section2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.sub2div1 h2{
+    font-size: 40px;
+}
+.sub2div1 h2:first-child{
+    font-size: 24px;
+    }
+   /*MAIN links a viajá******************************************************/ 
+    .secImg{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:5%;
+        width: 100%;
+        text-align: center;
+
+    }
+    .secImg a{
+        width: 90%;
+    }
+    #secImg h4{
+        padding-top: 24px;
+        font-size: 24px;
+    }
+    .imgPromo {
+        border-radius: 30px;
+        margin-top: 50px;
+      }
+    /*sec background imagen azul--------------------------------------------------------*/
+.secBackImg{
+    background-image: url("https://es.tourismpanama.com/includes/client_public/assets/redesign_assets/blue-bg-burst-parallax.jpg");
+    width:100%;
+    height:90vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    margin-top: 50px;
+}
+.secBackImg h3:first-child{
+    font-size:30px;
+}
+.secBackImg h3:nth-child(2){
+    margin-bottom: 5px;
+    font-size: 80px;
+    letter-spacing: 3px;
+}
+.listSocial{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:1em;
+}
+.linkSocialImg{
+    width: 40px;
+    margin-top: 20px;
+}
+/*section cards**********************************/
+.sectionCards{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    width: 100%;
+}
+.subSectionCards{
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+
+}
+.cards{
+    max-width: 40%;
+    padding: 10px;
+}
+.cards h3{
+    padding-bottom: 15px;
+}
+      
+}
+
+
+@media (max-width: 600px){
+    /*MAIN HERO BANNER*/
+    .heroBanner{
+        background-image: none;
+        background-color: #f84008;
+        height: 85vh;
+    }
+    .h2HeroBanner{
+        font-size: 100px;
+        height: 100%;
+        color: #d6d6d6;
+    }
+    .arrow-down{
+        display: none;
+    }
+
+
+/*index seccion 2------------------------------------------------------------------*/
+.section2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.sub2div1 h2{
+    font-size: 40px;
+}
+.sub2div1 h2:first-child{
+    font-size: 24px;
+    }
+/*sec background imagen azul--------------------------------------------------------*/
+.secBackImg{
+    height:70vh;
+    margin-top: 10px;
+}
+.secBackImg h3:first-child{
+    font-size: 30px;
+    line-height: 1em;
+    padding-bottom: 10px;
+}
+.secBackImg h3:nth-child(2){
+    margin-bottom: 0;
+    font-size: 60px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+.listSocial{
+    gap:3em;
+}
+.linkSocialImg{
+    width: 60px;
+}
+/*section cards**********************************/
+.sectionCards{
+    margin-top: 60px;
+    text-align: center;
+}
+.sectionCards h2{
+    font-size: 32px;
+}
+.subSectionCards{
+    padding-top: 20px;
+    gap: 15px;
+}
+.cards{
+    border-radius: 35px;
+    max-width: 80%;
+    padding: 10px;
+}
+.cards p,.cards h3{
+    padding: 15px;
+}
+
+}

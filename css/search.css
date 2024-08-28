@@ -1,0 +1,133 @@
+/*serch form*/
+.heroBanner2{
+    width: 100%;
+    height: 70vh;
+    margin-top: 8vh;
+    background-image: url(https://images.almundo.com/205/image/fetch/fl_progressive,w_1440,h_344,q_auto,c_fill,g_auto,f_jpg/https://almundo-com-res.cloudinary.com/image/upload/v1701109625/banner-home_dae90r.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.heroBanner2 h2{
+    color: #ffffff;
+}
+.sectionCardsTrip h2:first-child{
+    width: 100%;
+    background-color: orangered;
+    color: #ffffff;
+}
+.formCompra{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    height: 350px;
+}
+/*section cards*/
+.sectionCards{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    box-sizing: content-box;
+}
+.containerCardTrip{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cards{
+    text-align: center;
+    background-color: #ffffff;
+    border: solid 1px #d6d6d6;
+    border-radius: 10px;
+    max-width: 20%;
+    height: auto;
+    padding: 15px;
+
+}
+.cards h3{
+    padding-bottom: 10px;
+}
+
+.cards p {
+    line-height: 1.43;
+    letter-spacing: -0.1px;
+    color: #888;
+    font-size: 14px;
+}
+
+/*Promo cards Viajes*/
+.sectionCardsTrip{
+    text-align: start;
+    margin-top:50px;
+}
+.cardsTrip{
+    display: flex;
+    flex-direction: column;
+    height:400px;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0.5px 0.5px 0.5px rgb(206, 206, 206);
+    transition:  box-shadow 1s ;
+    margin:2%;
+}
+.cardsTrip:hover{
+    box-shadow: 3px 3px 4px rgb(206, 206, 206);
+}
+
+.subSectionCardTrip{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:20px;
+}
+.imgCardTrip{
+    width:100%;
+    background-size: cover;
+    border-radius: 12px 12px 0 0;
+}
+.contImgCard{
+    position: relative;
+}
+.cardPais{
+    background-color: orangered;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    color:white;
+    font-weight: 600;
+    padding: 5px;
+    border-radius: 0 8px 0 8px;
+}
+
+
+.linkCardTrip{
+    height: 100%;
+    width: 100%;
+    padding:15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align:start ;
+}
+.linkCardTrip div:first-child{
+    border-bottom:1px solid  rgb(206, 206, 206);
+    padding-bottom:15px;
+}
+
+.linkCardTrip h3{
+    font-size: 24px;
+}
+.linkCardTrip h4{
+    color:#545962;
+    font-weight: 500;
+}
+.linkCardTrip h2{
+    color: orangered;
+
+}

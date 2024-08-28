@@ -1,0 +1,119 @@
+/*CONTACTO*/
+.contactoMain {
+  background-image: url("../../img/travelHero1.jpg");
+  background-size: cover;
+  margin-top: 15vh;
+
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contactoMain h2{
+  width: 100%;
+  text-align: center;
+  background-color: #003366;
+  color: #ffffff;
+}
+
+/* Form Section */
+.formSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.formSection h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.formSection h2 {
+  font-size: 2.5em;
+  color: #FF5733;
+  align-items: center;
+}
+
+.formContact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  background:#003366a9;
+  width: 40%;
+  padding: auto;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+
+}
+fieldset{
+  border: none;
+}
+.formContact fieldset{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formLabel,.formInput{
+      margin: auto;
+      padding: 1rem;
+      color: black;
+      width: 100%;
+      max-width: 400px;
+
+}
+
+fieldset .formInput{
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+fieldset .formInput:focus{
+  border-color: #007BFF;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+}
+.texto_mensaje {
+  width: 100%;
+  height:100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+  max-width: 400px;
+}
+
+.botonEnviar {
+  background-color: #003366;
+  border-radius: 12px;
+  box-shadow: 0.5px 0.5px 0.5px rgb(206, 206, 206);
+  transition: box-shadow 1s;
+  padding: 1rem;
+  margin-top: 1rem;
+  color: #e9e9e9;
+  font-weight: 500;
+  transition: 0.5s;
+  width: fit-content;
+}
+
+.botonEnviar:hover {
+  background-color: #00458a;
+  color: #ffffff;
+
+}
+
+.botonEnviar:active {
+  position: relative;
+  top: 1px;
+}
+
+.aviso{
+  color: #ffffff;
+}
