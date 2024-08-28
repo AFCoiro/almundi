@@ -50,3 +50,27 @@ const params = new URLSearchParams(window.location.search);
 document.getElementById("nombre").textContent = params.get("nombre");
 document.getElementById("email").textContent = params.get("email");
 document.getElementById("telefono").textContent = params.get("telefono");
+
+
+
+
+
+/*****************************************************PARA EL ARCHIVO US.HTML*******************************/
+
+
+  const arrows = document.querySelectorAll('.arrowRight');
+const desplegables = document.querySelectorAll('.desplegable');
+
+  arrows.addEventListener("click",()=>{
+    console.log("hiicte click en boton bien")
+  })
+ arrows.forEach((arrow, i) => {
+     arrow.addEventListener('click', function() {
+         const desplegable = desplegables[i];
+         desplegable.style.display = desplegable.style.display === 'none' || desplegable.style.display === '' ? 'block' : 'none';
+         console.log("hiicte click en boton bien")
+
+     });
+     console.log("hiicte click en boton bien")
+
+ });

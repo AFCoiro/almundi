@@ -12,7 +12,7 @@ body{
 }
 a{
     text-decoration: none;
-    color:#f74008;
+    color:#f74008; 
 }
 ul {
     list-style: none;
@@ -279,12 +279,16 @@ padding-bottom: 30px;
     justify-content: center;
     gap: 15px;
 }
+
+.subSectionCards .cards{
+    max-width: 20%;
+}
 .cards{
     text-align: center;
     background-color: #ffffff;
     border: solid 1px #d6d6d6;
     border-radius: 10px;
-    max-width: 20%;
+
     padding: 15px;
 
 }

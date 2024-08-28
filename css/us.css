@@ -27,42 +27,7 @@
     font-size: 30px;
   }
 
-  /*4*/
-/*PAG. NOSOTROS--------------------------------------------------------------------------------------------------------------------------------*/
-/*4*/
 
-
-.contact {
-    text-align: right;
-}
-
-.contact p {
-    margin: 0;
-    font-size: 12px;
-}
-
-.contact a {
-    text-decoration: none;
-    color: #0073e6;
-}
-
-.hero {
-    position: relative;
-    text-align: center;
-    color: white;
-}
-
-.hero-img {
-    width: 100%;
-    height: auto;
-}
-
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 
 .attention {
     padding: 20px;
@@ -76,4 +41,72 @@
 
 .cards p {
     color: #555;
+}
+
+/*SECTION CARDS DE CONSULTAS*/
+
+.helepContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;
+}
+
+.helpItem{
+        padding: 20px;
+        margin: 1%;
+        width: 48%;
+        display: flex;
+        flex-direction: column;  
+      }
+
+.helpItemSubCont{
+  width: 100%;
+  display: flex;
+  flex-direction: row;  
+  align-items: center;
+  justify-content: space-between;
+}
+.helpItemSubCont div{
+  display: flex;
+  flex-direction: row;  
+  align-items: center;
+
+}
+.arrowRight{
+font-size: 30px;
+filter: invert(26%) sepia(99%) saturate(1693%) hue-rotate(356deg) brightness(105%) contrast(99%);
+cursor: pointer;
+}
+
+.desplegable {
+  display: none;
+}
+
+.helpImg{
+  height: 60px;
+  width: 60px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 60px;
+  
+}
+
+.cards.helpItem:nth-child(1) .helpImg {
+  background-image:  url( "https://media.despegar.com/media/pictures/4817079f-c46a-4842-a535-f97090f323fe");
+}
+.cards.helpItem:nth-child(2) .helpImg {
+  background-image: url("https://media.despegar.com/media/pictures/2c30fe75-184b-4cf0-9dc5-e8f20d85bb01");
+}
+.cards.helpItem:nth-child(3) .helpImg {
+  background-image: url("https://media.despegar.com/media/pictures/085ff1d7-fb92-48ec-9580-6d77bd1fc14e");
+}
+.cards.helpItem:nth-child(4) .helpImg {
+  background-image: url("https://media.despegar.com/media/pictures/31fa5353-0b75-4b72-be5b-590da4d4eec8");
+}
+.cards.helpItem:nth-child(5) .helpImg {
+  background-image: url("https://media.despegar.com/media/pictures/f4209450-8534-4117-b908-44a50afab43d");
+}
+.cards.helpItem:nth-child(6) .helpImg {
+  background-image: url("https://media.despegar.com/media/pictures/01b25775-13c5-4d04-8e84-7360440af544");
 }
