@@ -76,6 +76,8 @@ function fnMostrarPaises(paises) {
       containerCardTrip[0].append(cardsTrip);
     });
   }
+
+
   /*⬇⬇TRAVELS⬇⬇⬇⬇TRAVELS⬇⬇⬇⬇TRAVELS⬇⬇*/
 
 /*lo guardado en LS lo uso para que mediante DOMContentLoaded lo  muestre en la pagina travels.html */
@@ -143,3 +145,6 @@ document.addEventListener('DOMContentLoaded', function() {
           localStorage.removeItem('asunto'); 
         }});
           // Limpiar el valor almacenado
+
+ <script src="../scripts/search.js"></script>
+ console.log("hiicte click en boton bien")
