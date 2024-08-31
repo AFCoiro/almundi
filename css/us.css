@@ -55,7 +55,7 @@
 .helpItem{
         padding: 20px;
         margin: 1%;
-        width: 48%;
+        width: 100%;
         height: fit-content;
         display: flex;
         flex-direction: column;  
@@ -95,19 +95,25 @@ cursor: pointer;
 
 .cards.helpItem:nth-child(1) .helpImg {
   background-image:  url( "https://media.despegar.com/media/pictures/4817079f-c46a-4842-a535-f97090f323fe");
+    /*Contacto*/
 }
 .cards.helpItem:nth-child(2) .helpImg {
   background-image: url("https://media.despegar.com/media/pictures/2c30fe75-184b-4cf0-9dc5-e8f20d85bb01");
+    /*Cambios y cancelaciones*/
 }
 .cards.helpItem:nth-child(3) .helpImg {
   background-image: url("https://media.despegar.com/media/pictures/085ff1d7-fb92-48ec-9580-6d77bd1fc14e");
+    /*Equipaje, asientos y check-in*/
 }
 .cards.helpItem:nth-child(4) .helpImg {
   background-image: url("https://media.despegar.com/media/pictures/31fa5353-0b75-4b72-be5b-590da4d4eec8");
+    /*Mi reserva*/
 }
 .cards.helpItem:nth-child(5) .helpImg {
+  /*Mis viajes*/
   background-image: url("https://media.despegar.com/media/pictures/f4209450-8534-4117-b908-44a50afab43d");
 }
 .cards.helpItem:nth-child(6) .helpImg {
   background-image: url("https://media.despegar.com/media/pictures/01b25775-13c5-4d04-8e84-7360440af544");
+    /*Formas de pago, precios y beneficios*/
 }

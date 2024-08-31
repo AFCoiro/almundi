@@ -1,5 +1,6 @@
 const arrows = document.querySelectorAll('.arrowRight');
 const desplegables = document.querySelectorAll('.desplegable');
+const helpItem = document.querySelectorAll('.helpItem');
 
 arrows.forEach((arrow, i) => {
     arrow.addEventListener('click', function() {
@@ -10,8 +11,8 @@ arrows.forEach((arrow, i) => {
             }
         });
 
-        // Abrir el desplegable correspondiente al arrow clicado
+        // Abrir el desplegable correspondiente al arrow clickeado
         const desplegable = desplegables[i];
-        desplegable.style.display = desplegable.style.display === 'none' || desplegable.style.display === '' ? 'block' : 'none';
+        desplegable.style.display = desplegable.style.display === 'none' || desplegable.style.display === '' ? 'block' : 'none' ;
     });
 });

@@ -145,6 +145,4 @@ document.addEventListener('DOMContentLoaded', function() {
           localStorage.removeItem('asunto'); 
         }});
           // Limpiar el valor almacenado
-
- <script src="../scripts/search.js"></script>
  console.log("hiicte click en boton bien")
