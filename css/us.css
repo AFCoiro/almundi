@@ -59,6 +59,7 @@
         height: fit-content;
         display: flex;
         flex-direction: column;  
+        cursor: pointer;
       }
 
 .helpItemSubCont{
@@ -77,9 +78,10 @@
 .arrowRight{
 font-size: 30px;
 filter: invert(26%) sepia(99%) saturate(1693%) hue-rotate(356deg) brightness(105%) contrast(99%);
-cursor: pointer;
 }
-
+.rotated {
+  transform: rotate(90deg);
+}
 .desplegable {
   display: none;
 }
