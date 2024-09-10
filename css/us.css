@@ -118,4 +118,37 @@ filter: invert(26%) sepia(99%) saturate(1693%) hue-rotate(356deg) brightness(105
 .cards.helpItem:nth-child(6) .helpImg {
   background-image: url("https://media.despegar.com/media/pictures/01b25775-13c5-4d04-8e84-7360440af544");
     /*Formas de pago, precios y beneficios*/
+} 
+
+.desplegable p{
+margin-bottom: 25px;
+}
+.contCards{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+}
+.contCards .cards{
+padding:35px
+}
+.botonContacto{
+margin: 25px;
+}
+
+.cancelaciones{
+  text-align: start;
+}
+.cancelaciones h4{
+  text-align: center;
+  padding-bottom: 15px;
+}
+.cancelaciones h5{
+  font-size: large;
+  padding-bottom: 15px;
+}
+
+.cancelaciones li{
+  list-style:disc;
+
 }
