@@ -1,9 +1,14 @@
 .usHero{
-    height: 150px;
-    width: 100%;
+  height: 85vh;
+  width: 100%;
     text-align: center;
     overflow: hidden;
     position: relative;
+}
+@media (max-width:600) {
+  .usHero{
+    height: 60vh;
+  }
 }
 
 .usHeroImg{
@@ -12,22 +17,30 @@
     position: absolute; 
     top: 40%;                 
     transform: translate(-50%,-50%); 
-    object-fit: cover; 
+    object-fit: contain; 
   }
   .usHeroTittleDiv{
-    position: absolute; 
+    position: absolute;
     height: 100%;
     width: 100%;
-    align-items: center;
     padding-top: 30px;
-    color:white;
+    color: var(--text-color-primary);
     text-shadow: 1px 1px 3px black;
+    z-index: 4;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
   .usHeroTittle{
-    font-size: 30px;
+    font-size: 50px;
   }
 
-
+.bg-somosLideres{
+  background-image: url(./../img/bg/bg-icons.png);
+  background-color: var(--text-color-primary);
+}
 
 .attention {
     padding: 20px;
@@ -37,6 +50,7 @@
 
 .cards h2 {
     color:#f74008;
+    padding-bottom: 15px;
 }
 
 .cards p {
@@ -44,7 +58,11 @@
 }
 
 /*SECTION CARDS DE CONSULTAS*/
-
+.space-section h3{
+  text-align: center;
+  font-size: 32px;
+  padding-bottom: var(--space-items);
+}
 .helepContainer{
     width: 100%;
     display: flex;
@@ -83,7 +101,42 @@ filter: invert(26%) sepia(99%) saturate(1693%) hue-rotate(356deg) brightness(105
   transform: rotate(90deg);
 }
 .desplegable {
-  display: none;
+  max-height: 0; 
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.desplegable.active {
+  min-height: fit-content; 
+  opacity: 1;
+  padding-bottom: 25px;
+}
+.helpItemSubCont h4{
+  color: var(--text-color-secondary);
+
+}
+.desplegable h4{
+font-size:22px !important;
+text-align: center;
+color: var(--text-color-primary);
+}
+
+.desplegable h5{
+font-size:18px !important;
+text-align: center;
+padding: 15px 0;
+color: var(--text-color-secondary);
+}
+.desplegable h6{
+font-size:16px !important;
+text-align: center;
+padding: 10px 0;
+color: var(--text-color-secondary);
+
+}
+.flyItems{
+  padding: 20px 0;
 }
 
 .helpImg{
@@ -132,6 +185,13 @@ margin-bottom: 25px;
 .contCards .cards{
 padding:35px
 }
+.contCards .cards div:first-child{
+  padding-bottom: 15px;
+}
+.contCards .cards img{
+width: 60px;
+height: auto;
+}
 .botonContacto{
 margin: 25px;
 }
@@ -151,4 +211,14 @@ margin: 25px;
 .cancelaciones li{
   list-style:disc;
 
+}
+.disclaimer{
+  font-size: 12px;
+  padding: var(--space-items) 0 calc(var(--space-items)/2);
+}
+.ul-pagos{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 15px;
 }

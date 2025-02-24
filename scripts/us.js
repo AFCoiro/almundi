@@ -1,19 +1,18 @@
 const arrows = document.querySelectorAll('.arrowRight');
 const desplegables = document.querySelectorAll('.desplegable');
-const helpItem = document.querySelectorAll('.helpItem');
+const helpItems = document.querySelectorAll('.helpItem');
 
-helpItem.forEach((help, i) => {
+helpItems.forEach((help, i) => {
     help.addEventListener('click', function() {
         desplegables.forEach((desplegable, j) => {
             if (i !== j) {
-                desplegable.style.display = 'none';
+                desplegable.classList.remove('active'); // Cierra los demás
                 arrows[j].classList.remove('rotated');
             }
         });
-        const desplegable = desplegables[i];
-        desplegable.style.display = desplegable.style.display === 'none' || desplegable.style.display === '' ? 'block' : 'none' ;
+
+        // Alterna la clase active en el desplegable correspondiente
+        desplegables[i].classList.toggle('active');
         arrows[i].classList.toggle('rotated');
     });
 });
-
-
