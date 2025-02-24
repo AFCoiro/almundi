@@ -20,19 +20,30 @@
         <title>Al Mundi</title>
     </head>
 <body>
-    <header>
-        <div class="topHeader containerWidth">
-            <a href="../index.html"><img class="imgLogo" src="./../img/logo.png" alt="logo"></a>
-            <h1 class="h1Seo" hidden>Al Mundi, tu lugar para buscar viajes por el mundo</h1>
-            <div><a href="/pag/login.html">Mi cuenta</a></div>
-         </div>
-         <nav id="navbar" >
-          <a class="nav-link" href="/index.html">HOME</a>
-          <a class="nav-link" href="/pag/search.html">VIAJÁ</a>
-          <a class="nav-link" href="/pag/us.html">NOSOTROS</a>
-          <a class="nav-link" href="/pag/contact.html">CONTACTO</a>
-      </nav>
-    </header>
+    <header id="navbar">
+        <nav class="navbar-container containerWidth">
+            <a href="index.html">
+                <img class="navbar-logo" src="img/logo.png" alt="logo">
+            </a>
+          <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" aria-expanded="false">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div id="navbar-menu" aria-labelledby="navbar-toggle">
+            <div class="login">
+                <img src="img/user.svg" alt="login icon">
+                <a href="/pag/login.html">Mi cuenta</a>
+            </div>
+            <ul class="navbar-links">
+              <li class="navbar-item"><a class="navbar-link" href="index.html">HOME</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="pag/search.html">VIAJÁ</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="pag/us.html">NOSOTROS</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="pag/contact.html">CONTACTO</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
 <main class="mainConfirm">
 
     <h1>Datos recibidos del formulario</h1>
@@ -94,6 +105,7 @@
   </section>
 </footer>
 
+<script src="index.js"></script>
 <script src="../scripts/contact.js"></script>
 <script src="../scripts/search.js"></script>
 

@@ -4,11 +4,17 @@
     box-sizing: border-box;
     font-family: "Rubik", sans-serif;
     scroll-behavior: smooth;
+
+    --navbar-bg-color: #F1F1F1;
+    --navbar-text-color: #f74008;
+    --navbar-text-color-focus: #545962;
+    --navbar-bg-contrast: #1d1d1d;
 }
 body{
     background-color: #f2f4f5;
     position:relative;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 a{
     text-decoration: none;
@@ -20,16 +26,56 @@ ul {
 p{
     color: #545962;
 }
-main{
-    margin-top: 15vh;
-    padding-bottom: 10%;
-}
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+  }
 .containerWidth{
-    padding:0 5%;
-}
+    max-width: 1400px;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .space-section{
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+  .text-center{
+    text-align: center;
+  }
+  .no-mobile{
+    display:flex;
+  }
+  .no-desktop{
+    display: none;
+  } 
+  @media (max-width: 1200px){
+  
+    .no-mobile{
+        display:none;
+      }
+      .no-desktop{
+        display: flex;
+      } 
+    }
+  @media (max-width: 768px){
+    .space-section{
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+      }
+      .text-md-center{
+        text-align: center;
+      }  
 
+}
+@media (max-width: 480px){
+      .text-sm-center{
+        text-align: center;
+      } 
+}
 /*NAV---------------------------------------------------*/
-header{
+/* header{
     position: fixed;
     top: 0%;
     width: 100vw;
@@ -83,7 +129,190 @@ header{
     text-decoration: none;
     color: #333;
 }
+@media (max-width: 768px){
+    header{
+        position: fixed;
+    }
+    .topHeader{
+        padding-top: 2vh;
+    }
+    
+    #navbar{
+        height: 8vh;
+    
+    }
+} */
 
+
+  #navbar {
+    --navbar-height: 80px;
+    position: fixed;
+    height: var(--navbar-height);
+    background-color: var(--navbar-bg-color);
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    z-index:3;
+  }
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+  }
+  .navbar-item {
+    margin: 0.4em;
+    width: 100%;
+  }
+  
+  .home-link,
+  .navbar-link {
+    color: var(--navbar-text-color);
+    text-decoration: none;
+    display: flex;
+    font-weight: 400;
+    align-items: center;
+  }
+  
+  .home-link:is(:focus, :hover) {
+    color: var(--navbar-text-color-focus);
+  }
+  
+  .navbar-link {
+    justify-content: center;
+    width: 100%;
+    padding: 0.4em 0.8em;
+    border-radius: 5px;
+  }
+  
+  .navbar-link:is(:focus, :hover) {
+    color: var(--navbar-text-color-focus);
+    background-color: var(--navbar-bg-contrast);
+  }
+  .navbar-logo {
+    height: 25px;
+    filter: invert(39%) sepia(82%) saturate(5672%) hue-rotate(360deg) brightness(101%) contrast(95%);
+  }
+  #navbar-toggle {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+  .icon-bar {
+    display: block;
+    width: 25px;
+    height: 4px;
+    margin: 2px;
+    background-color: var(--navbar-text-color);
+  }
+
+
+  #navbar-toggle:is(:focus, :hover) .icon-bar {
+    background-color: var(--navbar-text-color);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+  }
+  #navbar-toggle[aria-expanded="true"] .icon-bar:is(:first-child, :last-child) {
+    position: absolute;
+    margin: 0;
+    width: 30px;
+
+  }
+  #navbar-toggle[aria-expanded="true"] .icon-bar:first-child {
+    transform:  rotate(45deg);
+}
+  #navbar-toggle[aria-expanded="true"] .icon-bar:nth-child(2) {
+    opacity: 0;
+  }
+  #navbar-toggle[aria-expanded="true"] .icon-bar:last-child {
+    transform:  rotate(-45deg);
+}
+  #navbar-menu {
+    position: fixed;
+    top: var(--navbar-height);
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    left: 0;
+    right: 0;
+    
+  }
+  #navbar-toggle[aria-expanded="true"] + #navbar-menu {
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    visibility: visible;
+  }
+  .login{
+    background-color: var(--navbar-bg-color);
+    text-align: center;
+    padding: 1rem 0;
+    margin:-1px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  .login a{
+    width: max-content;
+  }
+  .login img{
+    width: 20px;
+    filter: invert(39%) sepia(82%) saturate(5672%) hue-rotate(360deg) brightness(101%) contrast(95%);
+  }
+  .navbar-links {
+    list-style: none;
+    position: absolute;
+    background-color: var(--navbar-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 0;
+    right: 0;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+  
+  #navbar-toggle[aria-expanded="true"] + #navbar-menu .navbar-links {
+    padding: 1em;
+  }
+  @media screen and (min-width: 768px) {
+    #navbar-toggle,
+    #navbar-toggle[aria-expanded="true"] {
+      display: none;
+    }
+  
+    #navbar-menu,
+    #navbar-toggle[aria-expanded="true"] #navbar-menu {
+      visibility: visible;
+      opacity: 1;
+      position: static;
+      height: 100%;
+      display:flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: flex-end;
+      gap:100px;
+    }
+  
+    .navbar-links,
+    #navbar-toggle[aria-expanded="true"] #navbar-menu .navbar-links {
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+      position: static;
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+    }
+  }
 /*Footer --------------------------------------------------*/
 footer{
 text-align: center;
@@ -108,7 +337,6 @@ padding-bottom: 30px;
 .linkSocialFootImg{
     width: 30px;
     filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(183deg) brightness(106%) contrast(101%);
-
 }
 .menuFooter{
     color: #ffffff;
@@ -118,6 +346,7 @@ padding-bottom: 30px;
     flex-direction: row;
     justify-content: space-around;
     gap:10%;
+
 }
 .menuFooter h4{
     font-size: 18px;
@@ -135,12 +364,36 @@ padding-bottom: 30px;
     color: white;
 }
 
+@media (max-width: 768px){
+    .redesFooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .imgLogoFooter{
+        width: 128px;
+    }
+    .linkSocialFootImg{
+        padding-top:15px;
+        width: 40px;
+    }
+    .menuFooter{
+        padding-top: 40px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        line-height: 1.4;
+    }
+    .menuFooter div:last-child{
+        display: none;
+    }
+}
+
 /*1*/
 /*MAIN--------------------------------------------------------------------------*/
+
 /*index seccion herobanner*/
-
-
-
 .heroBanner{
     background-image: url("./img/travelHero1.jpg");
     background-repeat: no-repeat;
@@ -148,6 +401,7 @@ padding-bottom: 30px;
     background-size: cover;
     height: 85vh;
     width: auto;
+    clip-path: ellipse(100% 100% at center top);
 }
 .h2HeroBanner{
     font-size: 100px;
@@ -167,21 +421,61 @@ padding-bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-y: scroll;
     scroll-behavior: smooth;
 }
 .arrow-downImg{
     width: 50px;
 }
-
+@media (max-width: 768px){
+    .heroBanner{
+        background-image: url("./img/travelHero1.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 85vh;
+        width: auto;
+        clip-path: none;
+    }
+    .h2HeroBanner{
+        font-size: 100px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .arrow-down{
+        width: 100%;
+        height: 70px;
+        filter: invert(32%) sepia(25%) saturate(4928%) hue-rotate(353deg) brightness(105%) contrast(107%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        scroll-behavior: smooth;
+    }
+    .arrow-downImg{
+        width: 50px;
+    }
+}
+@media (max-width: 600px){
+    /*MAIN HERO BANNER*/
+    .heroBanner{
+        height: 60vh;
+    }
+    .h2HeroBanner{
+        font-size: 80px;
+        height: 100%;
+    }
+    .arrow-down{
+        display: none;
+    }
+}
 /*index seccion 2------------------------------------------------------------------*/
 #anchor{
-    height: 100px;
+    height: 30px;
 }
 .section2{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    margin-top: 100px;
 }
 .sub2div1{
   grid-column: 1/6;
@@ -196,14 +490,47 @@ padding-bottom: 30px;
     width:100%;
     background-size:contain;
 }
-.sub2div1 h2{
+.sub2div1-2{
     font-size: 64px;
 }
-.sub2div1 h2:first-child{
+.sub2div1-1{
     color:#003366;
     font-size: 35px;
-    font-family: "Permanent Marker", cursive;
 }
+.sub2div1 p{
+    font-size: 22px;
+}
+
+@media (max-width: 1200px){
+    .section2{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .sub2div1 h2, .sub2div2 h2{
+        font-size: 40px;
+    }
+    .sub2div1-1{
+        font-size: 24px;
+        }
+    .sub2div1>p{
+        padding-bottom: 40px;
+    } 
+}
+
+@media (max-width: 600px){
+    .sub2div1 h2, .sub2div2 h2{
+        font-size: 40px;
+        padding-bottom: 20px;
+    }
+    .sub2div1-1{
+        font-size: 24px;
+        padding-bottom: 10px;
+        }
+}
+
 /*sec background imagen azul--------------------------------------------------------*/
 .secBackImg{
     background-image: url("https://es.tourismpanama.com/includes/client_public/assets/redesign_assets/blue-bg-burst-parallax.jpg");
@@ -215,7 +542,7 @@ padding-bottom: 30px;
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 .secBackImg h3:first-child{
     font-family: "Permanent Marker", cursive;
@@ -225,7 +552,7 @@ padding-bottom: 30px;
 }
 .secBackImg h3:nth-child(2){
     color: #ffffff;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     font-size: 100px;
     letter-spacing: 6px;
     font-weight: 600;
@@ -240,7 +567,74 @@ padding-bottom: 30px;
     width: 50px;
     filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(183deg) brightness(106%) contrast(101%);
 }
+@media (max-width: 1200px){
+    .secBackImg{
+        height:60vh;
+    }
+}
+@media (max-width: 768px){
+    .secBackImg{
+        background-image: url("https://es.tourismpanama.com/includes/client_public/assets/redesign_assets/blue-bg-burst-parallax.jpg");
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        align-items: center;
+        /* margin-top: 50px; */
+    }
+    .secBackImg h3:first-child{
+        font-size:30px;
+    }
+    .secBackImg h3:nth-child(2){
+        margin-bottom: 5px;
+        font-size: 80px;
+        letter-spacing: 3px;
+    }
+    .listSocial{
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        gap:1em;
+    }
+    .linkSocialImg{
+        width: 40px;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 600px){
+    .secBackImg{
+        height:70vh;
+        margin-top: 10px;
+    }
+    .secBackImg h3:first-child{
+        font-size: 30px;
+        line-height: 1em;
+        padding-bottom: 10px;
+    }
+    .secBackImg h3:nth-child(2){
+        margin-bottom: 0;
+        font-size: 60px;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+    .listSocial{
+        gap:3em;
+    }
+}
+@media (max-width: 480px){
+    .secBackImg {
+        height: 40vh;
+    }
+    .secBackImg h3:first-child{
+        font-size: 25px;
+    }
+    .secBackImg h3:nth-child(2){
+        font-size: 50px;
+    }
 
+}
 /*img promociones-----------------------------------------------*/
 
 .secImg{
@@ -260,7 +654,7 @@ padding-bottom: 30px;
     }
     
 #secImg h4{
-    padding-top: 32px;
+    /* padding-top: 32px; */
     text-align: center;
     font-size: 32px;
 }
@@ -270,10 +664,10 @@ padding-bottom: 30px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
+    /* margin-top: 60px; */
 }
 .subSectionCards{
-    padding-top: 20px;
+    padding-top: 20px; 
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -293,101 +687,33 @@ padding-bottom: 30px;
 
 }
 .cards h3{
-    padding-bottom: 10px;
+    height: 80px;
 }
-
-
-/*****************************media querys***************************/
-
-
-@media (max-width: 768px){
-/*NAV---------------------------------------------------*/
-header{
-    position: fixed;
-}
-.topHeader{
-    padding-top: 2vh;
-}
-
-#navbar{
-    height: 8vh;
-
-}
-
-/*Footer --------------------------------------------------*/
-
-.redesFooter{
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-align-items: center;
-}
-.imgLogoFooter{
-    width: 128px;
-}
-.linkSocialFootImg{
-    padding-top:15px;
-    width: 40px;
-}
-.menuFooter{
-    padding-top: 40px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-.menuFooter div:last-child{
-    display: none;
-}
-/*MAIN HEROBANNER***********************************/
-/*MAIN--------------------------------------------------------------------------*/
-/*index seccion herobanner*/
-
-
-
-.heroBanner{
-    background-image: url("./img/travelHero1.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 85vh;
-    width: auto;
-}
-.h2HeroBanner{
-    font-size: 100px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Permanent Marker", cursive;
-}
-.arrow-down{
-    width: 100%;
-    height: 70px;
-    filter: invert(32%) sepia(25%) saturate(4928%) hue-rotate(353deg) brightness(105%) contrast(107%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-}
-.arrow-downImg{
-    width: 50px;
-}
-/*LINK SEC2*************/
-.section2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-.sub2div1 h2{
-    font-size: 40px;
-}
-.sub2div1 h2:first-child{
-    font-size: 24px;
+@media (max-width: 992px){
+    .sectionCards{
+        /* margin: 60px auto; */
+        width: 100%;
     }
-   /*MAIN links a viajá******************************************************/ 
+    .subSectionCards{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+    .subSectionCards .cards {
+        max-width: 590px;
+        padding: 10px;
+        margin:20px
+    }
+    .cards h3{
+        height: 40px;
+        padding-bottom: 25px;
+
+    }
+    /*img promociones-----------------------------------------------*/ 
     .secImg{
         display: flex;
         flex-direction: column;
@@ -396,152 +722,40 @@ align-items: center;
         gap:5%;
         width: 100%;
         text-align: center;
-
-    }
+        }
     .secImg a{
-        width: 90%;
-    }
+        width: 100%;
+        }
     #secImg h4{
-        padding-top: 24px;
+        /* padding-top: 24px; */
         font-size: 24px;
-    }
+        }
     .imgPromo {
         border-radius: 30px;
         margin-top: 50px;
-      }
-    /*sec background imagen azul--------------------------------------------------------*/
-.secBackImg{
-    background-image: url("https://es.tourismpanama.com/includes/client_public/assets/redesign_assets/blue-bg-burst-parallax.jpg");
-    width:100%;
-    height:90vh;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    align-items: center;
-    margin-top: 50px;
+        }
 }
-.secBackImg h3:first-child{
-    font-size:30px;
-}
-.secBackImg h3:nth-child(2){
-    margin-bottom: 5px;
-    font-size: 80px;
-    letter-spacing: 3px;
-}
-.listSocial{
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    gap:1em;
-}
-.linkSocialImg{
-    width: 40px;
-    margin-top: 20px;
-}
-/*section cards**********************************/
-.sectionCards{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 60px;
-    width: 100%;
-}
-.subSectionCards{
-    padding-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    gap: 15px;
-    width: 100%;
-
-}
-.cards{
-    max-width: 40%;
-    padding: 10px;
-}
-.cards h3{
-    padding-bottom: 15px;
-}
-      
-}
-
-
 @media (max-width: 600px){
-    /*MAIN HERO BANNER*/
-    .heroBanner{
-        background-image: none;
-        background-color: #f84008;
-        height: 85vh;
+    /*section cards**********************************/
+    .sectionCards{
+        /* margin-top: 60px; */
+        text-align: center;
     }
-    .h2HeroBanner{
-        font-size: 100px;
-        height: 100%;
-        color: #d6d6d6;
+    .sectionCards h2{
+        font-size: 32px;
     }
-    .arrow-down{
-        display: none;
+    .subSectionCards{
+        gap: 15px;
     }
+    .cards{
+        border-radius: 35px;
+        max-width: 80%;
+        padding: 10px;
+    }
+    .cards p,.cards h3{
+        padding: 25px 15px;
+    }
+}
 
 
-/*index seccion 2------------------------------------------------------------------*/
-.section2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-.sub2div1 h2{
-    font-size: 40px;
-}
-.sub2div1 h2:first-child{
-    font-size: 24px;
-    }
-/*sec background imagen azul--------------------------------------------------------*/
-.secBackImg{
-    height:70vh;
-    margin-top: 10px;
-}
-.secBackImg h3:first-child{
-    font-size: 30px;
-    line-height: 1em;
-    padding-bottom: 10px;
-}
-.secBackImg h3:nth-child(2){
-    margin-bottom: 0;
-    font-size: 60px;
-    letter-spacing: 1px;
-    font-weight: 600;
-}
-.listSocial{
-    gap:3em;
-}
-.linkSocialImg{
-    width: 60px;
-}
-/*section cards**********************************/
-.sectionCards{
-    margin-top: 60px;
-    text-align: center;
-}
-.sectionCards h2{
-    font-size: 32px;
-}
-.subSectionCards{
-    padding-top: 20px;
-    gap: 15px;
-}
-.cards{
-    border-radius: 35px;
-    max-width: 80%;
-    padding: 10px;
-}
-.cards p,.cards h3{
-    padding: 15px;
-}
 
-}

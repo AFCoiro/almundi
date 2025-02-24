@@ -19,40 +19,85 @@
     <title>Al Mundi</title>
 </head>
 <body>
-    <header>
-        <div class="topHeader containerWidth">
-            <a href="index.html"><img class="imgLogo" src="img/logo.png" alt="logo"></a>
-            <h1 class="h1Seo" hidden>Al Mundi, tu lugar para buscar viajes por el mundo</h1>
-            <div><a href="/pag/login.html">Mi cuenta</a></div>
+    <!-- <header  id="navbar">
+        <nav class="navbar-container">
+            <div class="topHeader containerWidth">
+                <a href="index.html">
+                    <img class="imgLogo" src="img/logo.png" alt="logo">
+                </a>
+                <div>
+                    <a href="/pag/login.html">Mi cuenta</a>
+                </div>
+            </div>
 
-        </div>
-        <nav id="navbar" >
-            <a class="nav-link" href="index.html">HOME</a>
-            <a class="nav-link" href="pag/search.html">VIAJÁ</a>
-            <a class="nav-link" href="/pag/us.html">NOSOTROS</a>
-            <a class="nav-link" href="pag/contact.html">CONTACTO</a>
+            <button
+            type="button"
+            id="navbar-toggle"
+            aria-controls="navbar-menu"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <div id="navbar-menu" aria-labelledby="navbar-toggle">
+            <ul id="navbar-links">
+                <li class="navbar-item"><a class="nav-link" href="index.html">HOME</a></li>
+                <li class="navbar-item"><a class="nav-link" href="pag/search.html">VIAJÁ</a></li>
+                <li class="navbar-item"><a class="nav-link" href="/pag/us.html">NOSOTROS</a></li>
+                <li class="navbar-item"><a class="nav-link" href="pag/contact.html">CONTACTO</a></li>
+            </ul>
+            </div>
         </nav>
-    </header>
+    </header> -->
+    <header id="navbar">
+        <nav class="navbar-container containerWidth">
+            <a href="index.html">
+                <img class="navbar-logo" src="img/logo.png" alt="logo">
+            </a>
+          <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" aria-expanded="false">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div id="navbar-menu" aria-labelledby="navbar-toggle">
+            <div class="login">
+                <img src="img/user.svg" alt="login icon">
+                <a href="/pag/login.html">Mi cuenta</a>
+            </div>
+            <ul class="navbar-links">
+              <li class="navbar-item"><a class="navbar-link" href="index.html">HOME</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="pag/search.html">VIAJÁ</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="pag/us.html">NOSOTROS</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="pag/contact.html">CONTACTO</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
     <main>
         <section class="heroBanner">
+            <h1 class="h1Seo" hidden>Al Mundi, tu lugar para buscar viajes por el mundo</h1>
             <h2 class="h2HeroBanner">¡VIAJA AHORA!</h2>
         </section>
         <section >
             <a href="#anchor" class="arrow-down"><img class="arrow-downImg" src="img/arrow-down.svg" alt="arrow arrow-down"></a>
         </section>
-        <section class="section2 containerWidth">
+        <section class="containerWidth section2  space-section">
             <div class="sub2div1 ">
-                <h2>Cultura. Aventura. Naturaleza.</h2>
-                <h2>¡Atrévete a hacerlo todo en ALMUNDI!</h2>
+                <h2 class="sub2div1-1 no-mobile">Cultura. Aventura. Naturaleza.</h2>
+                <h2 class="sub2div1-2 no-mobile">¡Atrévete a hacerlo todo en ALMUNDI!</h2>
                 <p>Prepárate para una aventura sin comparación. El mundo es un lugar inmenso con una gran diversidad. Esto significa más tiempo haciendo las cosas que te gustan, y menos tiempo de viaje entre ellas.<br>
                 Explora ruinas históricas, las calles coloniales de Casco Antiguo y el ambiente  moderno e internacional de las grandes ciudades. Aventúrate a la naturaleza y conoce a nuestras siete comunidades indígenas. Vuela hacia una de las selvas tropicales más estudiadas del mundo, sube hacia las montañas y en un día despejado, mira el Océano  o el Mar Caribe, desde la cima de tu montaña favorita. Sin importar el destino que elijas, siempre encontrarás una variedad de actividades, biodiversidad y cultura, para que hagas de todo o disfrutes a tu manera. ¿Listo para la aventura?</p>
             </div>
             <div class="sub2div2">
+                <h2 class="sub2div1-1 no-desktop">Cultura. Aventura. Naturaleza.</h2>
+                <h2 class="sub2div1-2 no-desktop">¡Atrévete a hacerlo todo en ALMUNDI!</h2>
                 <img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_720,q_60,w_622/v1/clients/panama/large_Isla_P_jaro_Isla_Col_n_Bocas_del_Toro_province_9f0e05ab-e988-4148-a164-7e1d6415dd0b.jpg" alt="viajes salto" >
             </div>
         </section>
         <section id="anchor"> </section>
-        <section id="secImg" >
+        <section id="secImg" class="space-section">
             <h4>🌏 ELEGÍ UNO DE NUESTROS PAQUETES Y PROMOCIONES ✈️</h4>
             <div class="secImg">
                 <a href="pag/search.html"  title="comprá mas barato en almundi" aria-label="Todos los destinos al mejor precio">
@@ -64,7 +109,7 @@
             </div>
         </section>
 
-        <section class="secBackImg">           
+        <section class="secBackImg secImspace-section">           
             <h3>Comparte tu experiencia</h3>
             <h3>#VivePorMás</h3>
             <div>
@@ -89,7 +134,7 @@
             </div>
         </section>
 
-        <section class="sectionCards">
+        <section class="sectionCards space-section">
             <h2>Comprá en Almundi todo para tu viaje</h2>
             <div class="subSectionCards">
                 <div class="cards">
@@ -114,7 +159,7 @@
     </main>
 
     <footer> 
-        <section class="redesFooter containerWidth">
+        <section class="containerWidth redesFooter ">
             <a href="index.html" ><img class="imgLogoFooter" src="img/logo.png" alt="logo"></a>
 
             <div>
@@ -162,6 +207,7 @@
         </section>
     </footer>
 
+    <script src="index.js"></script>
 </body>
 </html>
 

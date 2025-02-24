@@ -2,7 +2,6 @@
 .contactoMain {
   background-image: url("../../img/travelHero1.jpg");
   background-size: cover;
-  margin-top: 15vh;
 
   display:flex;
   flex-direction: column;
