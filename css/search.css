@@ -8,13 +8,49 @@
     text-align: center;
 }
 .heroBanner2 h2{
-    color: #ffffff;
+    color: var(--color-white);
+    max-width: 1200px;
+    margin: auto;
 }
 .sectionCardsTrip h2:first-child{
     width: 100%;
-    background-color: orangered;
-    color: #ffffff;
+    background-color: var(--text-color-primary);
+    color: var(--color-white);
+    padding-left: 1rem;
 }
+
+/*Botones de Filtro*/
+.section-btn{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: 3rem;
+padding-top: 40px;
+}
+.btn-filtro{
+width: 300px;
+height: 200px;
+border-radius: 35px;
+font-size:40px;
+font-family: "Rubik", sans-serif;
+font-weight: 800;
+text-transform: uppercase;
+overflow: hidden;
+}
+#btnTodo p{
+transform: rotate(25deg);
+}
+#btnAmerica{
+
+}
+#btnEuropa{
+
+}
+#btnMundo{
+
+}
+
 .formCompra{
     background-color: aliceblue;
     display: flex;

@@ -13,6 +13,8 @@
     --text-color-secondary:#231155;
     --text-color-secondary-hover:#331b75;
 
+    --text-color-tertiary:#caf5ed;
+
     --color-black: #1d1d1d;
     --text-color-grey: #545962;
 
@@ -56,7 +58,19 @@ p{
     margin-top: 60px !important;
     margin-bottom: 60px !important;
   }
-
+.main-title{
+font-size: 95px;
+}
+@media (max-width: 768px){
+    .main-title{
+        font-size: 60px;
+        }
+}
+@media (max-width: 480px){
+    .main-title{
+        font-size: 45px;
+        }
+}
   .text-center{
     text-align: center;
   }
@@ -66,6 +80,10 @@ p{
   .text-sec{
     color:var(--text-color-secondary)
   }
+  .bg-tertiary{
+    background-color:var(--text-color-tertiary)
+  }
+
   .no-mobile{
     display:flex;
   }
@@ -131,9 +149,9 @@ p{
     align-items: center;
   }
   
-  .home-link:is(:focus, :hover) {
+   .home-link:is(:focus, :hover) {
     color: var(--text-color-primary-focus);
-  }
+  } 
   
   .navbar-link {
     justify-content: center;
@@ -166,7 +184,7 @@ p{
     width: 25px;
     height: 4px;
     margin: 2px;
-    background-color: var(--color-white);
+    background-color: var(--text-color-primary);
   }
 
 
@@ -359,15 +377,15 @@ padding-bottom: 30px;
     clip-path: ellipse(100% 100% at center top);
 }
 .h2HeroBanner{
-    font-size: 100px;
     height: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     color:#f74008;
-    text-shadow: 1px 1px 3px black;
+    text-shadow: 1px 1px 14px #00000091;
 }
 .arrow-down{
     width: 100%;
@@ -391,7 +409,6 @@ padding-bottom: 30px;
         clip-path: none;
     }
     .h2HeroBanner{
-        font-size: 100px;
         height: 100%;
         display: flex;
         justify-content: center;
@@ -416,13 +433,13 @@ padding-bottom: 30px;
         height: 60vh;
     }
     .h2HeroBanner{
-        font-size: 80px;
         height: 100%;
     }
     .arrow-down{
         display: none;
     }
 }
+
 /*index seccion 2------------------------------------------------------------------*/
 #anchor{
     height: 30px;
@@ -448,7 +465,7 @@ padding-bottom: 30px;
     font-size: 64px;
 }
 .sub2div1-1{
-    color:#003366;
+    color:var(--text-color-secondary);
     font-size: 35px;
 }
 .sub2div1 p{
@@ -466,23 +483,21 @@ padding-bottom: 30px;
     .sub2div1 h2, .sub2div2 h2{
         font-size: 40px;
     }
-    .sub2div1-1{
+    h2.sub2div1-1{
         font-size: 24px;
         }
     .sub2div1>p{
+        padding-top: 20px;
         padding-bottom: 40px;
     } 
 }
 
 @media (max-width: 600px){
-    .sub2div1 h2, .sub2div2 h2{
-        font-size: 40px;
-        padding-bottom: 20px;
-    }
-    .sub2div1-1{
+    h2.sub2div1-1 {
         font-size: 24px;
         padding-bottom: 10px;
-        }
+    }
+
 }
 
 /*sec background imagen azul--------------------------------------------------------*/
@@ -687,6 +702,7 @@ padding-bottom: 30px;
     .imgPromo {
         border-radius: 30px;
         margin-top: 50px;
+        width: 90%;
         }
 }
 @media (max-width: 600px){

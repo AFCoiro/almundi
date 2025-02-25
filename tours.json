@@ -2,19 +2,49 @@
   {
     "nombre": "Argentina",
     "bandera": "🇦🇷",
-    "precio": 25000,
-    "descripcion": "Explora la vibrante ciudad de Buenos Aires y disfruta del famoso tango argentino. Visita las impresionantes cataratas del Iguazú y maravíllate con la belleza natural de la Patagonia.",
-    "titulo": "Descubre Argentina: Buenos Aires y Patagonia",
-    "salida": "2024-09-15",
+    "continente":"América",
+    "precio": 18000,
+    "descripcion": "Sumérgete en la cultura porteña explorando sus barrios históricos, disfrutando del tango en San Telmo y recorriendo la icónica Avenida 9 de Julio. Descubre la vibrante gastronomía y la energía de la ciudad que nunca duerme.",
+    "titulo": "Vive Buenos Aires: Tango, Historia y Gastronomía",
+    "salida": "2024-09-10",
     "embarque": "Ciudad de Buenos Aires",
-    "duracion": "9 días",
-    "destinos": "Buenos Aires + Iguazú + Patagonia",
+    "duracion": "5 días",
+    "destinos": "Buenos Aires",
     "hotel": "Hotel Emperador (Buenos Aires)",
-    "img": "../img/paises/Argentina.jpg"
+    "img": "../img/paises/Argentina-1.jpg"
+  },
+  {
+    "nombre": "Argentina",
+    "bandera": "🇦🇷",
+    "continente":"América",
+    "precio": 32000,
+    "descripcion": "Descubre la imponente belleza de la Patagonia. Desde los majestuosos glaciares en El Calafate hasta las montañas y lagos de Bariloche, vive una aventura inolvidable rodeado de paisajes únicos.",
+    "titulo": "Aventura en la Patagonia: Glaciares y Montañas",
+    "salida": "2024-10-05",
+    "embarque": "El Calafate",
+    "duracion": "7 días",
+    "destinos": "El Calafate + Bariloche",
+    "hotel": "Hotel Los Notros (El Calafate)",
+    "img": "../img/paises/Argentina-2.jpg"
+  },
+  {
+    "nombre": "Argentina",
+    "bandera": "🇦🇷",
+    "continente":"América",
+    "precio": 22000,
+    "descripcion": "Maravíllate con una de las Siete Maravillas Naturales del Mundo. Recorre las impresionantes Cataratas del Iguazú, explora la selva misionera y disfruta de la biodiversidad única del Parque Nacional Iguazú.",
+    "titulo": "Naturaleza Extrema: Cataratas del Iguazú",
+    "salida": "2024-11-20",
+    "embarque": "Misiones",
+    "duracion": "4 días",
+    "destinos": "Cataratas del Iguazú",
+    "hotel": "Gran Meliá Iguazú",
+    "img": "../img/paises/Argentina-3.jpg"
   },
   {
     "nombre": "Brasil",
     "bandera": "🇧🇷",
+    "continente":"América",
     "precio": 27000,
     "descripcion": "Sumérgete en la cultura vibrante de Río de Janeiro y disfruta de sus famosas playas. Explora la selva amazónica y descubre la belleza natural del Pantanal.",
     "titulo": "Aventura en Brasil: Río de Janeiro y Amazonas",
@@ -28,6 +58,7 @@
   {
     "nombre": "Ecuador",
     "bandera": "🇪🇨",
+    "continente":"América",
     "precio": 22000,
     "descripcion": "Descubre Quito y sus maravillas coloniales. Explora las Islas Galápagos y maravíllate con su biodiversidad única.",
     "titulo": "Explora Ecuador: Quito y Galápagos",
@@ -39,8 +70,23 @@
     "img": "../img/paises/Ecuador.jpg"
   },
   {
+    "nombre": "EEUU",
+    "bandera": "🇺🇸",
+    "continente":"América",
+    "precio": 45000,
+    "descripcion": "Vive la magia de Disney en Orlando con acceso a sus cuatro parques temáticos. Disfruta de las atracciones icónicas de Magic Kingdom, explora el futuro en Epcot y aventúrate en los mundos de Star Wars en Hollywood Studios.",
+    "titulo": "Disney World Orlando: Magia Sin Límites",
+    "salida": "2024-12-15",
+    "embarque": "Orlando",
+    "duracion": "7 días",
+    "destinos": "Disney World Orlando",
+    "hotel": "Disney's Grand Floridian Resort",
+    "img": "../img/paises/Disney.jpg"
+  },
+  {
     "nombre": "España",
     "bandera": "🇪🇸",
+    "continente":"Europa",
     "precio": 26000,
     "descripcion": "Disfruta de la rica cultura de Madrid y Barcelona. Visita los históricos sitios de Sevilla y Granada.",
     "titulo": "España Histórica: Madrid y Andalucía",
@@ -54,6 +100,7 @@
   {
     "nombre": "Francia",
     "bandera": "🇫🇷",
+    "continente":"Europa",
     "precio": 28000,
     "descripcion": "Vive el encanto de París y sus monumentos icónicos. Explora los viñedos de Bordeaux y disfruta de la costa azul en Niza.",
     "titulo": "Romance en Francia: París y la Riviera",
@@ -67,6 +114,7 @@
   {
     "nombre": "Italia",
     "bandera": "🇮🇹",
+    "continente":"Europa",
     "precio": 29000,
     "descripcion": "Disfruta de la rica historia de Roma y los canales de Venecia. Explora la Toscana y su belleza rústica.",
     "titulo": "Italia Clásica: Roma, Venecia y Toscana",
@@ -80,19 +128,21 @@
   {
     "nombre": "Irlanda",
     "bandera": "🇮🇪",
+    "continente":"Europa",
     "precio": 24000,
     "descripcion": "Explora los paisajes verdes y los castillos de Dublín y Galway. Visita los acantilados de Moher y el Anillo de Kerry.",
     "titulo": "Encantos de Irlanda: Dublín y Galway",
     "salida": "2024-10-15",
     "embarque": "Dublín",
     "duracion": "9 días",
-    "destinos": "Dublín + Galway + Acantilados de Moher + Anillo de Kerry",
+    "destinos": "Dublín + Galway + Acantilados de Moher",
     "hotel": "The Westbury (Dublín)",
     "img": "../img/paises/Irlanda.jpg"
   },
   {
     "nombre": "Indonesia",
     "bandera": "🇮🇩",
+    "continente":"Otros",
     "precio": 26000,
     "descripcion": "Descubre la belleza de Bali y sus templos. Explora las islas Komodo y maravíllate con su fauna exótica.",
     "titulo": "Aventura en Indonesia: Bali y Komodo",
@@ -106,6 +156,7 @@
   {
     "nombre": "Japón",
     "bandera": "🇯🇵",
+    "continente":"Otros",
     "precio": 30000,
     "descripcion": "Vive la modernidad de Tokio y la tradición de Kioto. Explora el monte Fuji y los templos antiguos.",
     "titulo": "Tradición y Modernidad en Japón: Tokio y Kioto",
@@ -119,6 +170,7 @@
   {
     "nombre": "Egipto",
     "bandera": "🇪🇬",
+    "continente":"Otros",
     "precio": 27000,
     "descripcion": "Explora las pirámides de Giza y los templos de Luxor. Navega por el Nilo y descubre la historia antigua.",
     "titulo": "Misterios de Egipto: El Cairo y Crucero por el Nilo",
@@ -132,6 +184,7 @@
   {
     "nombre": "Australia",
     "bandera": "🇦🇺",
+    "continente":"Otros",
     "precio": 32000,
     "descripcion": "Explora la Ópera de Sídney y la Gran Barrera de Coral. Descubre los paisajes desérticos y la fauna única del Outback.",
     "titulo": "Australia Asombrosa: Sídney y la Gran Barrera de Coral",
@@ -145,13 +198,14 @@
   {
     "nombre": "Sudáfrica",
     "bandera": "🇿🇦",
+    "continente":"Otros",
     "precio": 28000,
     "descripcion": "Disfruta de la vida salvaje en un safari en el Parque Kruger. Explora Ciudad del Cabo y la Ruta Jardín.",
     "titulo": "Safari y Aventura en Sudáfrica: Parque Kruger y Ciudad del Cabo",
     "salida": "2024-10-25",
     "embarque": "Johannesburgo",
     "duracion": "12 días",
-    "destinos": "Parque Kruger + Ciudad del Cabo + Ruta Jardín",
+    "destinos": "Parque Kruger + Ciudad del Cabo",
     "hotel": "The Silo Hotel (Ciudad del Cabo)",
     "img": "../img/paises/Sudáfrica.jpg"
   }
