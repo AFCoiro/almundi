@@ -13,7 +13,8 @@
     --text-color-secondary:#231155;
     --text-color-secondary-hover:#331b75;
 
-    --text-color-tertiary:#caf5ed;
+    /* --text-color-tertiary:#caf5ed; */
+    --text-color-tertiary:#b7d5d5;
 
     --color-black: #1d1d1d;
     --text-color-grey: #545962;
@@ -56,6 +57,9 @@ p{
   }
   .space-section-m{
     margin-top: 60px !important;
+    margin-bottom: 60px !important;
+  }
+  .space-section-mb{
     margin-bottom: 60px !important;
   }
 .main-title{
@@ -103,6 +107,9 @@ font-size: 95px;
     .space-section{
         padding-top: 40px !important;
         padding-bottom: 40px !important;
+      }
+      .space-section-mb{
+        margin-bottom: 40px !important;
       }
       .text-md-center{
         text-align: center;
@@ -376,15 +383,18 @@ padding-bottom: 30px;
     width: auto;
     clip-path: ellipse(100% 100% at center top);
 }
-.h2HeroBanner{
+.title-section{
     height: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.h2HeroBanner{
+
     flex-wrap: wrap;
-    color:#f74008;
+    color:var(--text-color-secondary);
     text-shadow: 1px 1px 14px #00000091;
 }
 .arrow-down{
@@ -441,17 +451,27 @@ padding-bottom: 30px;
 }
 
 /*index seccion 2------------------------------------------------------------------*/
+.section-img{
+    background-image: url('https://images.almundo.com/205/image/fetch/fl_progressive,q_auto,c_fill,g_auto/https://almundo-com-res.cloudinary.com/image/upload/v1737550652/HOME-GENERAL.png');
+    background-size: cover;
+    
+}
+
 #anchor{
     height: 30px;
 }
+
 .section2{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
+.section2 p{
+    color: var(--text-color-secondary) 
+}
 .sub2div1{
   grid-column: 1/6;
   grid-row: 1;
-  color:#003366;
+  color:var(--text-color-secondary);
 }
 .sub2div2{
     grid-column: 7/13;
@@ -460,11 +480,13 @@ padding-bottom: 30px;
 .sub2div2 img{
     width:100%;
     background-size:contain;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+
 }
 .sub2div1-2{
     font-size: 64px;
 }
-.sub2div1-1{
+.sub2div1-1,.sub2div1-2{
     color:var(--text-color-secondary);
     font-size: 35px;
 }
@@ -502,7 +524,7 @@ padding-bottom: 30px;
 
 /*sec background imagen azul--------------------------------------------------------*/
 .secBackImg{
-    background-image: url("https://es.tourismpanama.com/includes/client_public/assets/redesign_assets/blue-bg-burst-parallax.jpg");
+    background-image: url("./img/bg/bg-violet.jpg");
     width:100%;
     height:90vh;
     display:flex;
@@ -543,7 +565,6 @@ padding-bottom: 30px;
 }
 @media (max-width: 768px){
     .secBackImg{
-        background-image: url("https://es.tourismpanama.com/includes/client_public/assets/redesign_assets/blue-bg-burst-parallax.jpg");
         width:100%;
         display:flex;
         flex-direction: column;
@@ -658,7 +679,7 @@ padding-bottom: 30px;
 .cards h3{
     height: 80px;
 }
-@media (max-width: 992px){
+@media (max-width: 1200px){
     .sectionCards{
         /* margin: 60px auto; */
         width: 100%;
@@ -702,7 +723,7 @@ padding-bottom: 30px;
     .imgPromo {
         border-radius: 30px;
         margin-top: 50px;
-        width: 90%;
+        width: 60%;
         }
 }
 @media (max-width: 600px){
@@ -725,6 +746,9 @@ padding-bottom: 30px;
     .cards p,.cards h3{
         padding: 25px 15px;
     }
+    .imgPromo {
+        width: 90%;
+        }
 }
 
 

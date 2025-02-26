@@ -1,22 +1,31 @@
 /*serch form*/
 .heroBanner2{
-    width: 100%;
-    height: 70vh;
-    background-image: url(https://images.almundo.com/205/image/fetch/fl_progressive,w_1440,h_344,q_auto,c_fill,g_auto,f_jpg/https://almundo-com-res.cloudinary.com/image/upload/v1701109625/banner-home_dae90r.png);
+    background-image: url('https://images.almundo.com/205/image/fetch/fl_progressive,w_1440,h_344,q_auto,c_fill,g_auto,f_jpg/https://almundo-com-res.cloudinary.com/image/upload/v1701109625/banner-home_dae90r.png');
     background-repeat: no-repeat;
+    background-position:  100% 60% ;
     background-size: cover;
-    text-align: center;
+    height: 85vh;
+    width: auto;
+    clip-path: ellipse(100% 100% at center top);
 }
 .heroBanner2 h2{
     color: var(--color-white);
     max-width: 1200px;
     margin: auto;
 }
-.sectionCardsTrip h2:first-child{
-    width: 100%;
-    background-color: var(--text-color-primary);
+.sectionCardsTrip-title{
+    background-image: url('https://images.almundo.com/205/image/fetch/fl_progressive,q_auto,c_fill,g_auto/https://almundo-com-res.cloudinary.com/image/upload/v1737550652/HOME-GENERAL.png');
+background-color: var(--text-color-primary);
+border-radius: 0 0 30px 30px;
+background-size: cover;
+}
+.sectionCardsTrip-title h2{
     color: var(--color-white);
-    padding-left: 1rem;
+    padding: 1rem;
+    text-shadow: 5px 3px 4px #424242b4 ;
+    text-align: center;
+    font-size:35px;
+
 }
 
 /*Botones de Filtro*/
@@ -27,19 +36,31 @@ justify-content: center;
 align-items: center;
 gap: 3rem;
 padding-top: 40px;
+height: 300px;
 }
 .btn-filtro{
-width: 300px;
-height: 200px;
+width: 250px;
+height: 100%;
+border: none;
+cursor: pointer;
+background-color: transparent;
+/* height: 200px;
 border-radius: 35px;
 font-size:40px;
 font-family: "Rubik", sans-serif;
 font-weight: 800;
 text-transform: uppercase;
-overflow: hidden;
+overflow: hidden; */
 }
-#btnTodo p{
-transform: rotate(25deg);
+.btn-filtro img{
+    width: 100%;
+    filter: grayscale(30%);
+    transition: filter 0.3s ease-in-out;
+}
+.btn-filtro img:hover{
+    filter: grayscale(0%)
+}
+    #btnTodo p{
 }
 #btnAmerica{
 
@@ -97,7 +118,7 @@ transform: rotate(25deg);
 }
 
 /*Promo cards Viajes*/
-.sectionCardsTrip{
+.sectionCardsTrip, .sectionCardsTrip-title{
     text-align: start;
     margin-top:50px;
 }
@@ -165,4 +186,15 @@ transform: rotate(25deg);
 .linkCardTrip h2{
     color: orangered;
 
+}
+/*LETRAS CHICAS LEGALES*/
+.letra-chica{
+    max-width:1000px;
+}
+.letra-chica h6{
+    font-size: 16px;
+    font-weight: 600;
+}
+.letra-chica p{
+    font-size: 14px;
 }
