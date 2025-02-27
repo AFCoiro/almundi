@@ -372,16 +372,31 @@ padding-bottom: 30px;
 
 /*1*/
 /*MAIN--------------------------------------------------------------------------*/
-
-/*index seccion herobanner*/
 .heroBanner{
+    height: 550px;
+    width: auto;
+    clip-path: ellipse(100% 100% at center top);
+}
+@media (min-width:1400px){
+    /*MAIN HERO BANNER*/
+    .heroBanner{
+        height: 650px;
+    }
+}
+@media (max-width: 768px){
+    /*MAIN HERO BANNER*/
+    .heroBanner{
+        height: 90vh;
+        clip-path: none;
+
+    }
+}
+/*index seccion herobanner*/
+.indexHero{
     background-image: url("./img/bg/travelHero1.jpg");
     background-repeat: no-repeat;
     background-position:  100% 60% ;
     background-size: cover;
-    height: 85vh;
-    width: auto;
-    clip-path: ellipse(100% 100% at center top);
 }
 .title-section{
     height: 100%;
@@ -392,11 +407,43 @@ padding-bottom: 30px;
     justify-content: center;
 }
 .h2HeroBanner{
-
     flex-wrap: wrap;
     color:var(--text-color-secondary);
     text-shadow: 1px 1px 14px #00000091;
+    padding: 60px 0 30px ;
 }
+
+.cont-hero-text{
+    max-width: 1000px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #3c31a150;
+    padding: 30px;
+    box-shadow: 8px 7px 20px 3px #00000042;
+}
+.cont-hero-text p{
+    max-width: 500px;
+    text-align: start;
+    color: var(--color-white);
+    text-shadow: 2px 2px 2px #0000008c;
+}
+.botonContacto{
+    align-self: center;
+    background-color: var(--text-color-secondary);
+    border-radius: 12px;
+    box-shadow: 0.5px 0.5px 0.5px rgb(104, 104, 104);
+    transition:  box-shadow 1s ;
+    padding: 1rem;
+    color: #ffffff;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+.botonContacto:hover{
+    background-color: var(--text-color-secondary-hover);
+}
+
 .arrow-down{
     width: 100%;
     height: 70px;
@@ -410,19 +457,32 @@ padding-bottom: 30px;
     width: 50px;
 }
 @media (max-width: 768px){
-    .heroBanner{
+    .indexHero{
         background-image: url("./img/bg/travelHero1.jpg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         width: auto;
-        clip-path: none;
     }
     .h2HeroBanner{
-        height: 100%;
+        height: fit-content;
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 140px 0 30px;
+    }
+    .cont-hero-text{
+        max-width: 1000px;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #3c31a150;
+        padding: 10px;
+        box-shadow: 8px 7px 20px 3px #00000042;
+    }
+    .cont-hero-text p{
+        padding:0 1rem 1rem;
     }
     .arrow-down{
         width: 100%;
@@ -439,12 +499,6 @@ padding-bottom: 30px;
 }
 @media (max-width: 600px){
     /*MAIN HERO BANNER*/
-    .heroBanner{
-        height: 60vh;
-    }
-    .h2HeroBanner{
-        height: 100%;
-    }
     .arrow-down{
         display: none;
     }
@@ -533,6 +587,7 @@ padding-bottom: 30px;
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
+    background-attachment: fixed; /*parallax */
     /* margin-top: 50px; */
 }
 .secBackImg h3:first-child{
@@ -572,6 +627,8 @@ padding-bottom: 30px;
         background-repeat: no-repeat;
         background-size: cover;
         align-items: center;
+        background-attachment: scroll; /* Desactiva parallax*/
+
         /* margin-top: 50px; */
     }
     .secBackImg h3:first-child{
@@ -648,61 +705,107 @@ padding-bottom: 30px;
     text-align: center;
     font-size: 32px;
 }
-/*section cards**********************************/
+/*section cards*********************************/
 .sectionCards{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* margin-top: 60px; */
+text-align: center;
 }
-.subSectionCards{
-    padding-top: 20px; 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 15px;
+.sectionCards h2{
+    padding-bottom: 30px;
+
+}
+/* Asegura que las cards no toquen los bordes en el carrusel */
+.carousel-wrapper {
+    padding: 0 2rem; /* Aplica el margen que quieres dentro del carrusel */
+    overflow: hidden;
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
 }
 
-.subSectionCards .cards{
-    max-width: 20%;
+.carousel {
+    display: flex;
+    gap: 15px;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+    /* Eliminar cualquier posible desbordamiento horizontal */
+    width: max-content; /* Asegura que el contenido solo ocupe el espacio necesario */
 }
-.cards{
+
+.cards {
+    width: 300px !important; /* Mantén el tamaño fijo */
+    height: 450px !important; /* Mantén el tamaño fijo */
+    flex-shrink: 0; /* No permite que se achiquen */
     text-align: center;
     background-color: #ffffff;
     border: solid 1px #d6d6d6;
     border-radius: 10px;
-
-    padding: 15px;
-
+    padding: 25px;
 }
 .cards h3{
     height: 80px;
 }
-@media (max-width: 1200px){
-    .sectionCards{
-        /* margin: 60px auto; */
-        width: 100%;
-    }
-    .subSectionCards{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-        width: 100%;
-    }
-    .subSectionCards .cards {
-        max-width: 590px;
-        padding: 10px;
-        margin:20px
-    }
-    .cards h3{
-        height: 40px;
-        padding-bottom: 25px;
+/* Flechas */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.2); /* Gris transparente */
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 24px;
+    border-radius: 50%;
+    z-index: 10;
+    display: none; /* Se ocultan si no hay necesidad de carrusel */
+}
 
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
+}
+
+/* Indicadores (circulitos) */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.carousel-indicators span {
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.carousel-indicators .active {
+    background: #333;
+}
+
+/* En pantallas grandes, si entran todas las tarjetas, desactivar carrusel */
+@media (min-width: 1200px) {
+    .carousel-wrapper {
+        overflow: visible; /* Permite que se vean todas las tarjetas */
     }
+    .carousel {
+        justify-content: center;
+        transform: none !important; /* Evita movimiento */
+        width: 100%; /* Ajusta el carrusel al ancho del contenedor */
+    }
+    .carousel-btn {
+        display: none !important; /* Oculta flechas */
+    }
+    .carousel-indicators {
+        display: none !important; /* Oculta indicadores */
+    }
+}
+
+    @media (max-width: 1200px){
     /*img promociones-----------------------------------------------*/ 
     .secImg{
         display: flex;

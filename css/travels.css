@@ -72,20 +72,7 @@
 .travelPay span{
     font-size: 24px;
 }
-.botonContacto{
-    align-self: center;
-    background-color: var(--text-color-secondary);
-    border-radius: 12px;
-    box-shadow: 0.5px 0.5px 0.5px rgb(104, 104, 104);
-    transition:  box-shadow 1s ;
-    padding: 1rem;
-    color: #ffffff;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-}
-.botonContacto:hover{
-    background-color: var(--text-color-secondary-hover);
-}
+
 .travelPay a:hover{
     box-shadow: 3px 3px 4px rgb(206, 206, 206);
 }
