@@ -71,3 +71,72 @@ function filtrarPorContinente(continente, datos) {
   let paquetesFiltrados = datos.filter(pais => pais.continente === continente);
   fnMostrarPaises(paquetesFiltrados);
 }
+
+/*⬇⬇TRAVELS⬇⬇⬇⬇TRAVELS⬇⬇⬇⬇TRAVELS⬇⬇*/
+
+/*lo guardado en LS lo uso para que mediante DOMContentLoaded lo  muestre en la pagina travels.html */
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const infoPaisesGuardados = JSON.parse(localStorage.getItem('infoPais'));
+
+  if (infoPaisesGuardados) {
+    const mainTravel = document.getElementById('mainTravel');
+    mainTravel.innerHTML = `
+    <div class="contTravel">
+
+      <section class="travelInfo">
+          <img src="${infoPaisesGuardados.img}" alt="${infoPaisesGuardados.nombre}">
+          <div class="contTravelText containerWidth">
+              <h2>Descripcion</h2>
+              <h3>${infoPaisesGuardados.bandera}  ${infoPaisesGuardados.titulo}</h3>
+              <h4>Plan Cuota Simple - 12 cuotas fijas</h4>
+              <ul>
+                  <li>Duración: <span>${infoPaisesGuardados.duracion}</span></li>
+                  <li>Saliendo desde: <span>${infoPaisesGuardados.embarque}</span></li>
+                  <li>Destinos: <span>${infoPaisesGuardados.destinos}</span></li>
+                  <li>Hospedaje: <span>${infoPaisesGuardados.hotel}</span></li>
+              </ul>
+              <h3>Sobre ${infoPaisesGuardados.nombre}</h3>
+              <p>${infoPaisesGuardados.descripcion}</p>
+          </div>
+      </section>
+
+      <section class="travelPay">
+          <h2>${infoPaisesGuardados.bandera} ${infoPaisesGuardados.titulo}</h2>
+          <h3>📅Salida: ${infoPaisesGuardados.salida}</h3>
+          <h3>👤👤2 pasajeros,🛏️ 1 habitación</h3>
+          <h3>Precio total - 2 pasajeros: <span>$${infoPaisesGuardados.precio}</span></h3>
+          <a href="contact.html" class="botonContacto" id="btnContact">Consultar</a>
+      </section>
+
+    </div>
+    `;
+  
+    
+
+  }
+  const btnContact = document.getElementById("btnContact");
+  
+  btnContact.addEventListener('click', function () {
+    localStorage.setItem('asunto',`Reserva de paquete a ${infoPaisesGuardados.nombre} el ${infoPaisesGuardados.salida}`);
+    console.log('asunto',`Reserva de paquete a ${infoPaisesGuardados.nombre} el ${infoPaisesGuardados.salida}`);
+  });
+  }
+);
+
+      /*⬇⬇⬇⬇⬇⬇LLENAR FORMULARIO CON INFO DE TRAVELS⬇⬇⬇⬇⬇*/
+
+      document.addEventListener('DOMContentLoaded', function () {
+        let asunto = document.getElementById('asunto');
+        let storedAsunto = localStorage.getItem('asunto');
+        if (storedAsunto) {
+          asunto.value = storedAsunto;
+          asunto.disabled ="disabled";
+          console.log(storedAsunto);
+          localStorage.removeItem('asunto'); 
+        }});
+          // Limpiar el valor almacenado
+ console.log("hiicte click en boton bien")
