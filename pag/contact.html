@@ -45,44 +45,62 @@
         </nav>
       </header>
     <main class="contactoMain">
-      <h2>Formulario de contacto</h2>
+        <section class="contect-hero">
+            <div class="containerWidth">
+                <h1 class="h1Seo" hidden>Al Mundi, tu lugar para buscar viajes por el mundo</h1>
+                <h2>Formulario de contacto</h2>
+                <p>Complete el siguiente formulario con sus datos y a la brevedad será contactado.</p>
+            </div>
+        </section>
+        <section class="sec-form containerWidth">
 
-      <form id="formContact" class="formContact" method="GET" action="/pag/confirm.html">       
-        <fieldset>
-            <legend hidden>Contacto</legend>
+            <form id="formContact" class="formContact" method="GET" action="/pag/confirm.html">       
+                <fieldset>
+                    <legend ><h3>Déjanos tu mensaje</h3></legend>
+                    <!-- <label for="nombre" class="colocar_nombre formLabel">Nombre
+                        <span class="obligatorio">*</span>
+                    </label> -->
+                    <input type="text" name="nombre" id="nombre" class="formInput" required placeholder="*Escribe tu nombre">
+                    
+                    <!-- <label for="email" class="colocar_email formLabel">Email
+                        <span class="obligatorio">*</span>
+                    </label> -->
+                    <input type="email" name="email" id="email" class="formInput" required placeholder="*Escribe tu Email">
+                    
+                    <!-- <label for="telefono" class="colocar_telefono formLabel">Teléfono
+                    </label> -->
+                    <input type="tel" name="telefono" id="telefono" class="formInput" placeholder="*Escribe tu teléfono">
+                    
+                    <!-- <label for="asunto" class="colocar_asunto formLabel">Asunto
+                        <span class="obligatorio">*</span>
+                    </label> -->
+                    <input type="text" name="asunto" id="asunto" class="formInput" required placeholder="*Escribe un asunto" value="">
+                    
+                    <!-- <label for="mensaje" class="colocar_mensaje formLabel">Mensaje
+                        <span class="obligatorio">*</span>
+                    </label> -->
+                    <textarea name="mensaje" class="texto_mensaje" id="mensaje" required placeholder="*Deja aquí tu comentario..."></textarea>
+                </fieldset>
+                <p class="aviso">
+                    <span class="obligatorio"> * </span>los campos son obligatorios.
+                </p>          
+                <p id="warnings" style="color: red;"></p>
+                <button type="submit" id="enviar" class="botonContacto">Enviar</button>
             
-            <label for="nombre" class="colocar_nombre formLabel">Nombre
-                <span class="obligatorio">*</span>
-            </label>
-            <input type="text" name="nombre" id="nombre" class="formInput" required placeholder="Escribe tu nombre">
-            
-            <label for="email" class="colocar_email formLabel">Email
-                <span class="obligatorio">*</span>
-            </label>
-            <input type="email" name="email" id="email" class="formInput" required placeholder="Escribe tu Email">
-            
-            <label for="telefono" class="colocar_telefono formLabel">Teléfono
-            </label>
-            <input type="tel" name="telefono" id="telefono" class="formInput" placeholder="Escribe tu teléfono">
-            
-            <label for="asunto" class="colocar_asunto formLabel">Asunto
-                <span class="obligatorio">*</span>
-            </label>
-            <input type="text" name="asunto" id="asunto" class="formInput" required placeholder="Escribe un asunto" value="">
-            
-            <label for="mensaje" class="colocar_mensaje formLabel">Mensaje
-                <span class="obligatorio">*</span>
-            </label>
-            <textarea name="mensaje" class="texto_mensaje" id="mensaje" required placeholder="Deja aquí tu comentario..."></textarea>
-        </fieldset>
-        
-        <button type="submit" id="enviar" class="botonEnviar">Enviar</button>
-    
-        <p class="aviso">
-            <span class="obligatorio"> * </span>los campos son obligatorios.
-        </p>          
-        <p id="warnings" style="color: red;"></p>
-    </form>
+
+            </form>
+
+            <img class="img-form" src="https://media.staticontent.com/media/pictures/382b8492-8cfe-4400-89c4-c4656a0b8764" alt="imagen de contacto" >
+
+        </section>
+      
+    <div class="cardWpp">
+            <div>
+                <h4>Podes comunicarte directamente con nosotros por nuestro chat. Te atenderemos en más o menos 4 minutos</h4>
+                <a href="https://wa.me/1169742087" target="_blank"><img src="../img/icons/whatsapp.png" alt="whatsapp icon"></a>
+                <h5>WhatsApp</h5>
+            </div>
+    </div>
 
     </main>
     

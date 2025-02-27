@@ -60,18 +60,47 @@ overflow: hidden; */
 .btn-filtro img:hover{
     filter: grayscale(0%)
 }
-    #btnTodo p{
-}
-#btnAmerica{
 
-}
-#btnEuropa{
+@media(max-width:768px){
+    .section-btn{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        height: fit-content;
+        }
+    .btn-filtro{
+        max-width: 300px;
+        height: 40px;
+        background-color: var(--text-color-secondary);
+        color:var(--color-white);
+        font-family:"Rubik", sans-serif;
+        font-weight: 700;
+        border-radius: 10px;
+        box-shadow: 0.5px 0.5px 0.5px rgb(104, 104, 104);
+    }
 
-}
-#btnMundo{
+    .btn-filtro img{
+        display:none;
+    }
+    #btnTodo::before{
+        content: 'Paquetes almundi ✈️';
+    }
+    #btnAmerica::before{
+        content: 'Descubrí América 🌎';
 
-}
+    }
+    #btnEuropa::before{
+        content: 'Explorá Europa 🌍';
 
+    }
+    #btnMundo::before{
+        content: 'Aventurá por el mundo 🌏';
+    }
+}
 .formCompra{
     background-color: aliceblue;
     display: flex;

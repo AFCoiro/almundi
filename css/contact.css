@@ -1,22 +1,43 @@
 /*CONTACTO*/
-.contactoMain {
-  background-image: url("../../img/bg/travelHero1.jpg");
-  background-size: cover;
-  padding-top: 15vh;
 
+.contactoMain {
+  padding-top: 80px;
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.contactoMain h2{
+.contect-hero{
+  background-image: url("../../img/bg/bg-violet.jpg");
+  background-size: cover;
+  height: 150px;
   width: 100%;
-  text-align: center;
-  background-color: #003366;
-  color: #ffffff;
-}
+  padding: 20px 0;
 
+}
+.contect-hero h2{
+  font-size: 32px;
+  width: 100%;
+  text-align: start;
+  color: var(--color-white);
+  
+}
+.contect-hero p{
+  font-size: 20px;
+  color: var(--color-white);
+
+}
 /* Form Section */
+.sec-form{
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+  padding: 50px;
+  max-height: 600px;
+}
 .formSection {
   display: flex;
   flex-direction: column;
@@ -34,35 +55,49 @@
   color: #FF5733;
   align-items: center;
 }
-
+.img-form{
+  width: 100%;
+  clip-path: circle(58% at 70% 50%);
+}
 .formContact {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
-  background:#003366a9;
-  width: 40%;
-  padding: auto;
+  background-image: url('https://images.almundo.com/205/image/fetch/fl_progressive,q_auto,c_fill,g_auto/https://almundo-com-res.cloudinary.com/image/upload/v1737550652/HOME-GENERAL.png');
+  background-size: cover;
+  background-color:var(--text-color-secondary);
+  width: 100%;
   border: 1px solid #ddd;
   border-radius: 1rem;
 
 }
 fieldset{
   border: none;
+  padding:15px 0 5px;
 }
 .formContact fieldset{
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap:1rem;
 }
+fieldset legend{
+  font-size: 26px;
+  color: var(--color-white);
+  padding: 15px ;
+  background-color: var(--text-color-secondary);
+  border-radius: 1rem;
 
+}
 .formLabel,.formInput{
       margin: auto;
       padding: 1rem;
       color: black;
       width: 100%;
       max-width: 400px;
+      height:2.5rem;
+
 
 }
 
@@ -76,12 +111,12 @@ fieldset .formInput{
 }
 
 fieldset .formInput:focus{
-  border-color: #007BFF;
+  border-color: var(--text-color-secondary-hover);
   box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
 }
 .texto_mensaje {
   width: 100%;
-  height:100%;
+  height:6rem;
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -90,30 +125,42 @@ fieldset .formInput:focus{
   max-width: 400px;
 }
 
-.botonEnviar {
-  background-color: #003366;
-  border-radius: 12px;
-  box-shadow: 0.5px 0.5px 0.5px rgb(206, 206, 206);
-  transition: box-shadow 1s;
-  padding: 1rem;
-  margin-top: 1rem;
-  color: #e9e9e9;
-  font-weight: 500;
-  transition: 0.5s;
-  width: fit-content;
-}
-
-.botonEnviar:hover {
-  background-color: #00458a;
-  color: #ffffff;
-
-}
-
-.botonEnviar:active {
-  position: relative;
-  top: 1px;
-}
-
 .aviso{
   color: #ffffff;
+  padding: 10px ;
+  background-color: var(--text-color-secondary);
+}
+#enviar{
+  margin:1rem auto;
+}
+.cardWpp{
+  text-align: center;
+  background-color: #ffffff;
+  border: solid 1px #d6d6d6;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex  ;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  margin: 30px auto;
+}
+.cardWpp h3{
+  height: 80px;
+}
+
+.cardWpp  img{
+width: 60px;
+height: auto;
+
+}
+.cardWpp div{
+  max-width: 600px;
+  display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+padding: 10px;
 }

@@ -1,6 +1,6 @@
 let containerCardTrip = document.getElementsByClassName("containerCardTrip")[0];
 
-const jsonUrl = '../../tours.json';
+const jsonUrl = '../tours.json';
 
 /* Llamado al JSON interno */
 async function ProcesarDatos() {
