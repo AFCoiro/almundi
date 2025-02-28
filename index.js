@@ -1,7 +1,7 @@
 const navbar = document.querySelector("#navbar");
 const navbarToggle = navbar.querySelector("#navbar-toggle");
 const navbarMenu = document.querySelector("#navbar-menu");
-const navbarLinksContainer = navbarMenu.querySelector(".navbar-links");
+const navbarLinksContainer = navbarMenu.querySelector(".navbar-cont-links");
 
 let isNavbarExpanded = navbarToggle.getAttribute("aria-expanded") === "true";
 
@@ -103,4 +103,40 @@ document.addEventListener("DOMContentLoaded", function () {
   // Inicializar
   updateCarousel();
 });
+
+/*Login modal*/
+
+const login = document.querySelectorAll('.login')
+
+login.forEach(log=>{
+
+  log.addEventListener('click',()=>{
+
+    let modal = document.createElement('div');
+      modal.className="login-modal";
+      modal.innerHTML=`
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <h4>Bienvenido a tu próximo viaje</h4>
+          <img src="img/logo-grande.png" alt="logo almundi">
+          <p>Para ver tus reservas ingresá o registrate con el email que realizaste la compra.</p>
+          <div class="cont-btn-login">
+          <button class="botonContacto" href='#' >INGRESAR</button>
+          <button class="botonContacto" href='#' >REGISTRATE</button>
+          </div>
+      </div>
+      `;
+ 
+
+      document.body.append(modal);
+      
+      const closebtn = document.querySelector('.close');
+      closebtn.addEventListener('click',()=>{ modal.remove() })
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) modal.remove();
+    });
+  });
+  
+})
+
 

@@ -3,7 +3,7 @@ const desplegables = document.querySelectorAll('.desplegable');
 const helpItems = document.querySelectorAll('.helpItem');
 
 
-/*Para que se abra card desplegable en us.html */
+/*Para que se abra card desplegable en help.html */
 
 helpItems.forEach((help, i) => {
     help.addEventListener('click', function() {

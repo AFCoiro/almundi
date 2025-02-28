@@ -15,7 +15,7 @@
 }
 .sectionCardsTrip-title{
     background-image: url('https://images.almundo.com/205/image/fetch/fl_progressive,q_auto,c_fill,g_auto/https://almundo-com-res.cloudinary.com/image/upload/v1737550652/HOME-GENERAL.png');
-background-color: var(--text-color-primary);
+background-color: var(--color-primary);
 border-radius: 0 0 30px 30px;
 background-size: cover;
 }
@@ -75,7 +75,7 @@ overflow: hidden; */
     .btn-filtro{
         max-width: 300px;
         height: 40px;
-        background-color: var(--text-color-secondary);
+        background-color: var(--color-secondary);
         color:var(--color-white);
         font-family:"Rubik", sans-serif;
         font-weight: 700;

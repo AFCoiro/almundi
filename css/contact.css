@@ -38,6 +38,7 @@
   padding: 50px;
   max-height: 600px;
 }
+
 .formSection {
   display: flex;
   flex-direction: column;
@@ -52,7 +53,7 @@
 
 .formSection h2 {
   font-size: 2.5em;
-  color: #FF5733;
+  color: var(--color-primary);
   align-items: center;
 }
 .img-form{
@@ -65,11 +66,10 @@
   align-items: center;
   background-image: url('https://images.almundo.com/205/image/fetch/fl_progressive,q_auto,c_fill,g_auto/https://almundo-com-res.cloudinary.com/image/upload/v1737550652/HOME-GENERAL.png');
   background-size: cover;
-  background-color:var(--text-color-secondary);
+  background-color:var(--color-secondary);
   width: 100%;
   border: 1px solid #ddd;
   border-radius: 1rem;
-
 }
 fieldset{
   border: none;
@@ -86,14 +86,14 @@ fieldset legend{
   font-size: 26px;
   color: var(--color-white);
   padding: 15px ;
-  background-color: var(--text-color-secondary);
+  background-color: var(--color-secondary);
   border-radius: 1rem;
 
 }
 .formLabel,.formInput{
       margin: auto;
       padding: 1rem;
-      color: black;
+      color:  var(--color-black);
       width: 100%;
       max-width: 400px;
       height:2.5rem;
@@ -111,7 +111,7 @@ fieldset .formInput{
 }
 
 fieldset .formInput:focus{
-  border-color: var(--text-color-secondary-hover);
+  border-color: var(--color-secondary-hover);
   box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
 }
 .texto_mensaje {
@@ -126,16 +126,129 @@ fieldset .formInput:focus{
 }
 
 .aviso{
-  color: #ffffff;
+  color:  var(--color-white);;
   padding: 10px ;
-  background-color: var(--text-color-secondary);
+  background-color: var(--color-secondary);
 }
 #enviar{
   margin:1rem auto;
+  background-color: var(--color-white);
+  color: var(--color-secondary);
+  cursor:pointer;
 }
+#enviar:hover{
+  background-color: var(--color-white-hover);
+  color: var(--color-secondary-hover);
+
+}
+
+@media(max-width:992px){
+    .sec-form{
+      width: 100%;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      grid-template-columns:1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-column-gap: 10px;
+      padding: 50px;
+    }
+
+    .img-form{
+      display: none;
+    }
+    .formContact {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      /* background-image: url('https://media.staticontent.com/media/pictures/382b8492-8cfe-4400-89c4-c4656a0b8764');
+      background-size: cover;
+      background-position: left top; */
+      margin: auto;
+      max-width: 800px;   
+      position: relative;
+      background: none; 
+      border: none;
+    }
+    
+    .formContact::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("https://media.staticontent.com/media/pictures/382b8492-8cfe-4400-89c4-c4656a0b8764") center/cover no-repeat;
+      filter: blur(3px) brightness(1.1);
+      border-radius: 3rem;
+      border: none;
+      z-index: -1;
+    }
+    .formContact fieldset{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap:1rem;
+      margin-left: 1.5rem;
+    }
+    fieldset legend {
+      font-size: 22px;
+      color: var(--color-secondary);
+      background-color: transparent;
+      backdrop-filter: blur(5px);
+      padding:15px 0 0 15px;
+    }
+    .aviso {
+      background-color: transparent;
+      color: var(--color-secondary);
+      font-weight: 700;
+      margin-left:1.5rem;
+      backdrop-filter: blur(5px);
+      padding: 10px 0 0;
+      border-radius: 50px;
+    }
+
+
+      .formLabel,.formInput{
+        max-width: 320px;
+        margin: 0%;
+    }
+    .texto_mensaje {
+      max-width: 320px;
+    }
+}
+
+@media(max-width:480px){
+    .contect-hero {
+      height: auto;
+    }
+    .formContact {
+      align-items: center;
+    }
+    .formContact fieldset{
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      margin-left: 0;
+    }
+      fieldset legend, .aviso , .formLabel,.formInput,
+    .texto_mensaje {
+      width: 280px;
+    }
+    fieldset legend {
+      padding: 10px ;
+      margin: auto;
+    }
+    #enviar {
+      background-color: var(--color-secondary);
+      color: var(--color-white);
+    }
+}
+
 .cardWpp{
   text-align: center;
-  background-color: #ffffff;
+  background-color:  var(--color-white);
   border: solid 1px #d6d6d6;
   border-radius: 10px;
   padding: 15px;
@@ -164,3 +277,9 @@ align-items: center;
 gap: 10px;
 padding: 10px;
 }
+@media(max-width:768px){
+    .cardWpp{
+        margin:30px;
+    }
+  }
+

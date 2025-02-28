@@ -22,7 +22,7 @@
     height: 100%;
     width: 100%;
     padding-top: 30px;
-    color: var(--text-color-primary);
+    color: var(--color-primary);
     text-shadow: 1px 1px 3px black;
     z-index: 4;
     display: flex;
@@ -125,26 +125,26 @@ filter: invert(26%) sepia(99%) saturate(1693%) hue-rotate(356deg) brightness(105
   padding-bottom: 25px;
 }
 .helpItemSubCont h4{
-  color: var(--text-color-secondary);
+  color: var(--color-secondary);
 
 }
 .desplegable h4{
 font-size:22px !important;
 text-align: center;
-color: var(--text-color-primary);
+color: var(--color-primary);
 }
 
 .desplegable h5{
 font-size:18px !important;
 text-align: center;
 padding: 15px 0;
-color: var(--text-color-secondary);
+color: var(--color-secondary);
 }
 .desplegable h6{
 font-size:16px !important;
 text-align: center;
 padding: 10px 0;
-color: var(--text-color-secondary);
+color: var(--color-secondary);
 
 }
 .flyItems{
