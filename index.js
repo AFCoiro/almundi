@@ -104,6 +104,8 @@ document.addEventListener("DOMContentLoaded", function () {
   updateCarousel();
 });
 
+
+
 /*Login modal*/
 
 const login = document.querySelectorAll('.login')
@@ -119,10 +121,12 @@ login.forEach(log=>{
           <span class="close">&times;</span>
           <h4>Bienvenido a tu próximo viaje</h4>
           <img src="img/logo-grande.png" alt="logo almundi">
-          <p>Para ver tus reservas ingresá o registrate con el email que realizaste la compra.</p>
-          <div class="cont-btn-login">
-          <button class="botonContacto" href='#' >INGRESAR</button>
-          <button class="botonContacto" href='#' >REGISTRATE</button>
+          <div id="modalCuerpo">
+            <p>Para ver tus reservas ingresá o registrate con el email que realizaste la compra.</p>
+            <div class="cont-btn-login">
+              <button class="botonContacto" id='ingresar' >INGRESAR</button>
+              <button class="botonContacto" id='registrar' >REGISTRATE</button>
+            </div> 
           </div>
       </div>
       `;
@@ -135,8 +139,35 @@ login.forEach(log=>{
       modal.addEventListener("click", (e) => {
         if (e.target === modal) modal.remove();
     });
+
+    const ingresar = document.getElementById('ingresar');
+    const registrar = document.getElementById('registrar');
+    const modalCuerpo = document.getElementById('modalCuerpo');
+
+    ingresar.addEventListener('click',fnIngresar);
+    registrar.addEventListener('click',fnRegistrar);
+    
+    function fnIngresar() {
+      modalCuerpo.innerHTML=`
+      <h5>Ingresar</h5>
+      <button class="login">
+      Volver</button>
+      `
+    }
+
+    function fnRegistrar() {
+      modalCuerpo.innerHTML=`
+      <h5>Registrar</h5>
+      <button class="login">
+      Volver</button>
+
+      `
+    }
+
+
   });
-  
+  fnIngresar();
+  fnRegistrar();
 })
 
 
