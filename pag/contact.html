@@ -31,15 +31,11 @@
             <span class="icon-bar"></span>
           </button>
           <div id="navbar-menu" aria-labelledby="navbar-toggle">
-            <div class="login">
-                <img src="../img/icons/user.svg" alt="login icon">
-                <a href="login.html">Mi cuenta</a>
-            </div>
             <ul class="navbar-cont-links">
               <li class="navbar-item"><a class="navbar-link" href="../index.html">HOME</a></li>
               <li class="navbar-item"><a class="navbar-link" href="search.html">VIAJÁ</a></li>
               <li class="navbar-item"><a class="navbar-link" href="help.html">AYUDA</a></li>
-              <li class="navbar-item"><a class="navbar-link" href="contact.html">CONTACTO</a></li>
+              <li class="navbar-item"><a class="navbar-link active" href="contact.html">CONTACTO</a></li>
             </ul>
           </div>
         </nav>
@@ -47,8 +43,7 @@
     <main class="contactoMain">
         <section class="contect-hero">
             <div class="containerWidth">
-                <h1 class="h1Seo" hidden>Al Mundi, tu lugar para buscar viajes por el mundo</h1>
-                <h2>Formulario de contacto</h2>
+                <h1>Formulario de contacto Almundi</h1>
                 <p>Complete el siguiente formulario con sus datos y a la brevedad será contactado.</p>
             </div>
         </section>
@@ -57,28 +52,19 @@
             <form id="formContact" class="formContact" method="GET" action="/pag/confirm.html">       
                 <fieldset>
                     <legend ><h3>Déjanos tu mensaje</h3></legend>
-                    <!-- <label for="nombre" class="colocar_nombre formLabel">Nombre
-                        <span class="obligatorio">*</span>
-                    </label> -->
+
                     <input type="text" name="nombre" id="nombre" class="formInput" required placeholder="*Escribe tu nombre">
                     
-                    <!-- <label for="email" class="colocar_email formLabel">Email
-                        <span class="obligatorio">*</span>
-                    </label> -->
+
                     <input type="email" name="email" id="email" class="formInput" required placeholder="*Escribe tu Email">
                     
-                    <!-- <label for="telefono" class="colocar_telefono formLabel">Teléfono
-                    </label> -->
+
                     <input type="tel" name="telefono" id="telefono" class="formInput" placeholder="*Escribe tu teléfono">
                     
-                    <!-- <label for="asunto" class="colocar_asunto formLabel">Asunto
-                        <span class="obligatorio">*</span>
-                    </label> -->
+
                     <input type="text" name="asunto" id="asunto" class="formInput" required placeholder="*Escribe un asunto" value="">
                     
-                    <!-- <label for="mensaje" class="colocar_mensaje formLabel">Mensaje
-                        <span class="obligatorio">*</span>
-                    </label> -->
+
                     <textarea name="mensaje" class="texto_mensaje" id="mensaje" required placeholder="*Deja aquí tu comentario..."></textarea>
                 </fieldset>
                 <p class="aviso">
@@ -149,7 +135,6 @@
                       <li><a href="../index.html">Home</a></li>
                       <li><a href="search.html">Viajá</a></li>
                       <li><a href="contact.html">Contacto</a></li>
-                      <li><a href="/session.html">Iniciar sesión</a></li>
                   </ul>
       </section>
   </footer>

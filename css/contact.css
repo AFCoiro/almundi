@@ -15,11 +15,12 @@
   padding: 20px 0;
 
 }
-.contect-hero h2{
+.contect-hero h1{
   font-size: 32px;
   width: 100%;
   text-align: start;
   color: var(--color-white);
+  padding-top: 20px;
   
 }
 .contect-hero p{
@@ -97,8 +98,6 @@ fieldset legend{
       width: 100%;
       max-width: 400px;
       height:2.5rem;
-
-
 }
 
 fieldset .formInput{
