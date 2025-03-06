@@ -1,36 +1,48 @@
-.usHero{
+/* Estilos para la sección usHero con video de fondo */
+.usHero {
+  position: relative;
   height: 85vh;
   width: 100%;
-    text-align: center;
-    overflow: hidden;
-    position: relative;
-    clip-path: ellipse(100% 100% at center top);
+  text-align: center;
+  overflow: hidden;
+  clip-path: ellipse(100% 100% at center top); /* Forma elíptica en la parte superior */
+}
 
+.usHero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* El video estará detrás del contenido */
+}
+
+.usHero-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que el video cubra todo el área */
+}
+
+.usHeroTittleDiv {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding-top: 30px;
+  color: var(--color-primary);
+  text-shadow: 1px 1px 3px black;
+  z-index: 4; /* Asegura que el título esté por encima del video */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.usHeroTittle {
+  color: var(--color-primary);
+  text-align: center;
 }
 
 
-.usHeroImg{
-    height: auto;      
-    width: 100%;       
-    position: absolute; 
-    top: 40%;                 
-    transform: translate(-50%,-50%); 
-    object-fit: contain; 
-  }
-  .usHeroTittleDiv{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    padding-top: 30px;
-    color: var(--color-primary);
-    text-shadow: 1px 1px 3px black;
-    z-index: 4;
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
 
 .attention {
     padding: 20px;
@@ -85,7 +97,6 @@
         height: fit-content;
         display: flex;
         flex-direction: column;  
-        cursor: pointer;
       }
 
 .helpItemSubCont{
@@ -94,6 +105,7 @@
   flex-direction: row;  
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 .helpItemSubCont div{
   display: flex;
@@ -116,13 +128,13 @@ filter: invert(26%) sepia(99%) saturate(1693%) hue-rotate(356deg) brightness(105
 }
 
 .desplegable.active {
-  min-height: fit-content; 
+  max-height: fit-content; 
   opacity: 1;
   padding-bottom: 25px;
+  pointer-events: auto; 
 }
 .helpItemSubCont h4{
   color: var(--color-secondary);
-
 }
 .desplegable h4{
 font-size:22px !important;
@@ -141,8 +153,8 @@ font-size:16px !important;
 text-align: center;
 padding: 10px 0;
 color: var(--color-secondary);
-
 }
+
 .flyItems{
   padding: 20px 0;
 }

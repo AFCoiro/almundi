@@ -1,18 +1,55 @@
 /*serch form*/
-.heroBanner2{
-    background-image: url('https://images.almundo.com/205/image/fetch/fl_progressive,w_1440,h_344,q_auto,c_fill,g_auto,f_jpg/https://almundo-com-res.cloudinary.com/image/upload/v1701109625/banner-home_dae90r.png');
-    background-repeat: no-repeat;
-    background-position:  100% 60% ;
-    background-size: cover;
+/* heroBanner2 - se cambia a video de fondo */
+.heroBanner2 {
+    position: relative;
     height: 85vh;
-    width: auto;
+    width: 100%;
     clip-path: ellipse(100% 100% at center top);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
-.heroBanner2 h2{
+
+.heroBanner2-video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.heroBanner2 h1 {
     color: var(--color-white);
     max-width: 1200px;
     margin: auto;
+    z-index: 2;
+    text-shadow: 1px 1px 14px #00000091;
+    text-align: center;
 }
+
+.title-section {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+@media (max-width: 768px) {
+    .heroBanner2 h1 {
+        font-size: 1.5rem;
+        padding: 30px 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .heroBanner2 h1 {
+        font-size: 1.2rem;
+    }
+}
+
 .sectionCardsTrip-title{
     background-image: url('https://images.almundo.com/205/image/fetch/fl_progressive,q_auto,c_fill,g_auto/https://almundo-com-res.cloudinary.com/image/upload/v1737550652/HOME-GENERAL.png');
 background-color: var(--color-primary);

@@ -43,11 +43,17 @@
       </header>
     <main>
         <section class="usHero">
-            <img src="../img/bg/travelHero2.jpg" alt="Lanterns" class="usHeroImg">
+            <div class="usHero-video">
+                <video autoplay muted loop>
+                    <source src="../videos/ayuda.mp4" type="video/mp4">
+                    Tu navegador no soporta el formato de video.
+                </video>
+            </div>
             <div class="usHeroTittleDiv">
                 <h1 class="usHeroTittle main-title">¿CÓMO PODEMOS AYUDARTE?</h1>
             </div>
         </section>
+        
         <section class="bg-somosLideres space-section">
             <div class="attention cardsUs">
                 <h2>SOMOS LÍDERES EN ATENCIÓN</h2>
@@ -194,7 +200,7 @@
                     <div class="desplegable containerWidth">
                         <h5>Planeá tu próximo viaje con Al Mundi</h5>
                         <p>¡¡¡Todos nuestros paquetes estan a tu disposición!!! Encontrar el destino ideal para tus vacaciones en neustra sección de viajes.</p>
-                        <a href="search.html" class="botonContacto">Conocé más</a>
+                        <a href="search.html" class="botonContacto"  target="_blank">Conocé más</a>
                     </div>
                 </div>
 
@@ -225,7 +231,7 @@
                         <h4>PROMOCIONES</h4>
                         <h5>Viajá por Argentina con Banco MACRO<sup>®</sup> </h5>
                         <p>3,6 y 9 cuotas sin interes en Aerolineas Argentinas pagando con cualquier tarjeta de crédito Visa o Mastercard de banco Macro para todas las rutas nacionales. Sin tope de reintegro.</p>
-                        <a href="../pag/travels.html" class="botonContacto">Conocé más</a>
+                        <a id="btnArgentina" href="search.html?filtro=argentina" class="botonContacto" >Conocé más</a>
 
                     </div>
                 </div>
@@ -294,6 +300,7 @@
 
     <script src="../index.js"></script>
     <script src="../scripts/help.js"></script>
+    <script src="../scripts/search.js"></script>
 </body>
 
 </html>

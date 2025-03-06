@@ -1,5 +1,7 @@
+// Seleccionar el contenedor de las cards
 let containerCardTrip = document.getElementsByClassName("containerCardTrip")[0];
 
+// Ruta al archivo JSON
 const jsonUrl = '../tours.json';
 
 /* Llamado al JSON interno */
@@ -7,7 +9,7 @@ async function ProcesarDatos() {
   try {
     const datosJson = await fetch(jsonUrl);
     const datosJ = await datosJson.json();
-    
+
     // Ordenar por precio y tomar los 6 más baratos
     const paquetesOrdenados = datosJ.sort((a, b) => a.precio - b.precio).slice(0, 6);
     fnMostrarPaises(paquetesOrdenados);
@@ -15,7 +17,7 @@ async function ProcesarDatos() {
     console.log("Paquetes más baratos:", paquetesOrdenados);
 
     // Agregar eventos a los botones de filtro
-    document.getElementById("btnTodo").addEventListener("click", () => fnMostrarPaises( datosJ));
+    document.getElementById("btnTodo").addEventListener("click", () => fnMostrarPaises(datosJ));
 
     document.getElementById("btnAmerica").addEventListener("click", () => filtrarPorContinente("América", datosJ));
     document.getElementById("btnEuropa").addEventListener("click", () => filtrarPorContinente("Europa", datosJ));
@@ -50,13 +52,13 @@ function fnMostrarPaises(paises) {
         </div>
         <div>
           <h4>Precio por persona desde</h4>
-          <h2>$$${precio}</h2>
+          <h2>$${precio}</h2>
           <p>Incluye impuestos, tasas y cargos</p>
         </div>
       </a>
     `;
 
-    /* Guardar la info de la card en localStorage */
+    // Guardar la info de la card en localStorage
     cardsTrip.querySelector('.linkCardTrip').addEventListener('click', function () {
       const infoPaisGuardado = { nombre, bandera, precio, descripcion, titulo, salida, embarque, duracion, destinos, hotel, img };
       localStorage.setItem('infoPais', JSON.stringify(infoPaisGuardado));
@@ -72,12 +74,34 @@ function filtrarPorContinente(continente, datos) {
   fnMostrarPaises(paquetesFiltrados);
 }
 
-/*⬇⬇TRAVELS⬇⬇⬇⬇TRAVELS⬇⬇⬇⬇TRAVELS⬇⬇*/
+/* Filtrar por el parámetro 'filtro' en la URL */
+document.addEventListener('DOMContentLoaded', async function () {
+  // Capturamos el parámetro de la URL (si existe)
+  const urlParams = new URLSearchParams(window.location.search);
+  const filtro = urlParams.get('filtro'); // "argentina" en este caso
 
-/*lo guardado en LS lo uso para que mediante DOMContentLoaded lo  muestre en la pagina travels.html */
+  try {
+    // Llamar al JSON
+    const response = await fetch(jsonUrl);
+    const data = await response.json();
 
+    // Filtrar los datos si se pasa el filtro
+    let paquetesFiltrados = data;
 
+    if (filtro === 'argentina') {
+      // Filtrar los paquetes cuyo nombre sea "Argentina"
+      paquetesFiltrados = data.filter(pais => pais.nombre.toLowerCase() === 'argentina');
+    }
 
+    // Mostrar los paquetes filtrados
+    fnMostrarPaises(paquetesFiltrados);
+
+  } catch (error) {
+    console.error("*****ERROR*****: " + error);
+  }
+});
+
+/*⬇⬇⬇⬇TRAVELS⬇⬇⬇⬇TRAVELS⬇⬇⬇⬇TRAVELS⬇⬇*/
 
 document.addEventListener('DOMContentLoaded', function() {
   const infoPaisesGuardados = JSON.parse(localStorage.getItem('infoPais'));
@@ -114,29 +138,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     </div>
     `;
-  
-    
 
   }
   const btnContact = document.getElementById("btnContact");
-  
+
   btnContact.addEventListener('click', function () {
     localStorage.setItem('asunto',`Reserva de paquete a ${infoPaisesGuardados.nombre} el ${infoPaisesGuardados.salida}`);
     console.log('asunto',`Reserva de paquete a ${infoPaisesGuardados.nombre} el ${infoPaisesGuardados.salida}`);
   });
+});
+
+/*⬇⬇⬇⬇⬇⬇LLENAR FORMULARIO CON INFO DE TRAVELS⬇⬇⬇⬇⬇*/
+
+document.addEventListener('DOMContentLoaded', function () {
+  let asunto = document.getElementById('asunto');
+  let storedAsunto = localStorage.getItem('asunto');
+  if (storedAsunto) {
+    asunto.value = storedAsunto;
+    asunto.disabled ="disabled";
+    console.log(storedAsunto);
+    localStorage.removeItem('asunto'); 
   }
-);
-
-      /*⬇⬇⬇⬇⬇⬇LLENAR FORMULARIO CON INFO DE TRAVELS⬇⬇⬇⬇⬇*/
-
-      document.addEventListener('DOMContentLoaded', function () {
-        let asunto = document.getElementById('asunto');
-        let storedAsunto = localStorage.getItem('asunto');
-        if (storedAsunto) {
-          asunto.value = storedAsunto;
-          asunto.disabled ="disabled";
-          console.log(storedAsunto);
-          localStorage.removeItem('asunto'); 
-        }});
-          // Limpiar el valor almacenado
- console.log("hiicte click en boton bien")
+});

@@ -23,7 +23,6 @@ Si bien la entrega no exigía un enfoque con cliente, **una persona asumió el r
 Actualmente, este repositorio contiene únicamente la parte **front-end** del proyecto. El desarrollo del **backend** se realizó en otro repositorio dentro de un grupo diferente como parte de la entrega para la certificación en backend. En el futuro, se planea:  
 
 - Reemplazar el JSON por una **base de datos SQL**. 
-- **Agregar una base de datos para alojar nuevos usuarios**, permitiendo registros y autenticación.  
 - Implementar la conexión con el backend utilizando **Node.js**.  
 
 ## 🚀 Estado del proyecto  

@@ -528,138 +528,130 @@ box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
 /*1*/
 /*MAIN--------------------------------------------------------------------------*/
 .heroBanner{
-    height: 550px;
+    height: 85vh;
     width: auto;
     clip-path: ellipse(100% 100% at center top);
 }
-@media (min-width:1400px){
-    /*MAIN HERO BANNER*/
-    .heroBanner{
-        height: 650px;
-    }
-}
+/* @media (min-width:1400px){
+    /* .heroBanner{
+        height: 85vh;
+    } 
+} */
 @media (max-width: 768px){
-    /*MAIN HERO BANNER*/
     .heroBanner{
-        height: 90vh;
+        /* height: 90vh; */
         clip-path: none;
 
     }
 }
 /*index seccion herobanner*/
-.indexHero{
-    background-image: url("./img/bg/bg-baloons.jpg");
-    background-repeat: no-repeat;
-    background-position:  50% 50% ;
-    background-size: cover;
+.indexHero {
+    position: relative;
+    width: 100%;
+    height: 85vh; 
+    overflow: hidden;
 }
-.title-section{
+
+.indexHero-video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title-section {
+    position: relative;
+    z-index: 2;
     height: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-.h1HeroBanner{
-    flex-wrap: wrap;
-    color:var(--color-white);
-    text-shadow: 1px 1px 14px #00000091;
-    padding: 60px 0 30px ;
+    color: var(--color-white);
 }
 
-.cont-hero-text{
+.h1HeroBanner {
+    flex-wrap: wrap;
+    color: var(--color-white);
+    text-shadow: 1px 1px 14px #00000091;
+    padding: 60px 0 30px;
+}
+
+.cont-hero-text {
     max-width: 1000px;
-    display:flex;
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    background-color: #9c94fa31;
+    background-color: var(--color-white);
     padding: 30px;
     box-shadow: 8px 7px 20px 3px #00000042;
     border-radius: 10px;
 }
-.cont-hero-text p{
+
+.cont-hero-text p {
     max-width: 500px;
     text-align: start;
     font-weight: 700;
     color: var(--color-secondary);
 }
-.botonContacto{
+
+.botonContacto {
     all: unset;
     align-self: center;
     background-color: var(--color-secondary);
     border-radius: 12px;
     box-shadow: 0.5px 0.5px 0.5px rgb(104, 104, 104);
-    transition:  box-shadow 1s ;
+    transition: box-shadow 1s;
     padding: 1rem;
     color: #ffffff;
     font-weight: 500;
     transition: background-color 0.3s ease;
     cursor: pointer;
 }
-.botonContacto:hover{
+
+.botonContacto:hover {
     background-color: var(--color-secondary-hover);
 }
 
-.arrow-down{
-    width: 100%;
-    height: 70px;
-    filter: invert(32%) sepia(25%) saturate(4928%) hue-rotate(353deg) brightness(105%) contrast(107%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    scroll-behavior: smooth;
-}
-.arrow-downImg{
-    width: 50px;
-}
-@media (max-width: 768px){
-    .indexHero{
-        background-image: url("./img/bg/travelHero1.jpg");
+
+@media (max-width: 768px) {
+    .indexHero {
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         width: auto;
     }
-    .h1HeroBanner{
+    .h1HeroBanner {
         height: fit-content;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 140px 0 30px;
     }
-    .cont-hero-text{
+    .cont-hero-text {
         max-width: 1000px;
-        display:flex;
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: #3c31a150;
-        padding: 10px;
+        background-color: var(--color-white);
+        padding: 20px 10px;
         box-shadow: 8px 7px 20px 3px #00000042;
     }
-    .cont-hero-text p{
-        padding:0 1rem 1rem;
+    .cont-hero-text p {
+        padding: 0 1rem;
     }
-    .arrow-down{
-        width: 100%;
-        height: 70px;
-        filter: invert(32%) sepia(25%) saturate(4928%) hue-rotate(353deg) brightness(105%) contrast(107%);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        scroll-behavior: smooth;
-    }
-    .arrow-downImg{
-        width: 50px;
-    }
+
 }
-@media (max-width: 600px){
-    /*MAIN HERO BANNER*/
-    .arrow-down{
-        display: none;
+@media (max-width: 480px) {
+    .cont-hero-text {
+        max-width: 300px;
     }
 }
 
@@ -897,7 +889,7 @@ text-align: center;
 
 .cards {
     width: 300px !important; 
-    height: 450px !important; 
+    height: 400px !important; 
     flex-shrink: 0; 
     text-align: center;
     background-color: #ffffff;
