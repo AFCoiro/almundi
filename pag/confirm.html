@@ -1,26 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-    
-        <link rel="stylesheet" href="../index.css">
-        <link rel="stylesheet" href="../css/confirm.css">
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="shortcut icon" href="./../favicon.png" type="image/x-icon">
-    
-        <title>Al Mundi</title>
+            <!-- Meta estándar para SEO -->
+            <meta name="description" content="Descubrí el mundo con Almundi. Ofrecemos paquetes de viaje a destinos increíbles con ofertas exclusivas y la mejor experiencia.">
+            <meta name="keywords" content="viajes, paquetes turísticos, vacaciones, turismo, vuelos, hoteles, destinos, Almundi">
+            <meta name="author" content="Almundi Travel">
+            <meta name="robots" content="index, follow">
+        
+            <!-- Open Graph (Facebook, LinkedIn) -->
+            <meta property="og:title" content="Almundi - Viajes y Paquetes Turísticos por el Mundo">
+            <meta property="og:description" content="Explorá los mejores destinos con nuestros paquetes de viaje exclusivos. Tu próxima aventura empieza aquí.">
+            <meta property="og:image" content="../img/media.png">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://afcoiro.github.io/almundi/">
+            <meta property="og:type" content="website">
+        
+            <!-- Twitter Cards -->
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Almundi - Viajes y Paquetes Turísticos">
+            <meta name="twitter:description" content="Ofertas de viajes y paquetes turísticos a los mejores destinos del mundo.">
+            <meta name="twitter:image" content="../img/media.png">
+            <meta name="twitter:site" content="@almunditravel">
+        
+            <!-- Meta para dispositivos móviles -->
+            <meta name="theme-color" content="#331b75">
+
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+        
+            <link rel="stylesheet" href="../index.css">
+            <link rel="stylesheet" href="../css/search.css">
+
+            <link rel="stylesheet" href="../css/confirm.css">
+
+            <link rel="shortcut icon" href="./../favicon.png" type="image/x-icon">
+        
+            <title>Al Mundi</title>
     </head>
 <body>
-    <header id="navbar">
+<header id="navbar">
         <nav class="navbar-container containerWidth">
             <a href="../index.html">
                 <img class="navbar-logo" src="../img/icons/logo.png" alt="logo">
@@ -32,29 +59,43 @@
           </button>
           <div id="navbar-menu" aria-labelledby="navbar-toggle">
             <ul class="navbar-cont-links">
-                      <li><a href="../index.html">Home</a></li>
-                      <li><a href="search.html">Viajá</a></li>
-                      <li><a href="contact.html">Contacto</a></li>
-                      <li><a href="/session.html">Iniciar sesión</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="../index.html">HOME</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="search.html">VIAJÁ</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="help.html">AYUDA</a></li>
+              <li class="navbar-item"><a class="navbar-link active" href="contact.html">CONTACTO</a></li>
             </ul>
-          </div>
+          </div>   
         </nav>
       </header>
-<main class="mainConfirm">
+      <main class="mainConfirm">
+        <section class="sectionConfirm">
+            <h1>¡Tu reserva está confirmada!</h1>
+            <p class="confirmP">Gracias por elegirnos, <span id="nombre"></span>.  
+               En breve recibirás un email a <span id="email"></span> y un mensaje a <span id="telefono"></span> con todos los detalles de tu viaje.</p>
+        
+            
+        </section>
 
-    <h1>Datos recibidos del formulario</h1>
-    <p><strong>Nombre:</strong> <span id="nombre"></span></p>
-    <p><strong>Email:</strong> <span id="email"></span></p>
-    <p><strong>Teléfono:</strong> <span id="telefono"></span></p>
-    <p><strong>Asunto:</strong> <span id="asunto"></span></p>
-    <p><strong>Mensaje:</strong> <span id="mensaje"></span></p>
+        <section class="sectionCardsTrip containerWidth">
+            <h2 class="confirmH2">✈️¿Listo para tu próxima aventura?🌏</h2> 
+            <p class="confirmP">Mientras esperás la confirmación final, explorá más destinos y encontrá nuevas experiencias que te esperan.</p>
+            <div class="containerCardTrip">
+            </div>
+        </section>
 
-</main>
+        <section class="containerWidth letra-chica space-section">
+            <h6>Podés cancelar tus compras* realizadas de forma online o telefonica dentro de un plazo máximo de 10 días desde la fecha que realizaste la compra.</h6><br>
+            <p>Podés cancelar tus compras* realizadas de forma online o telefónica dentro de un plazo máximo de 10 días desde la fecha que realizaste la compra.
+            </p><br>
+            <p>*Según Resolución 329/2020 ANAC no aplica para vuelos, se rigen por política de devolución informada en tu voucher.</p>
+        </section>
+    </main>
+    
 
 
 <footer>
   <section class="redesFooter containerWidth">
-      <a href="index.html" ><img class="imgLogoFooter" src="./../img/icons/logo.png" alt="logo"></a>
+      <a href="../index.html" ><img class="imgLogoFooter" src="./../img/icons/logo.png" alt="logo"></a>
 
       <div>
           <ul class="listSocial">

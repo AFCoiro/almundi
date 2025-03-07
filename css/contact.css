@@ -65,7 +65,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url('https://images.almundo.com/205/image/fetch/fl_progressive,q_auto,c_fill,g_auto/https://almundo-com-res.cloudinary.com/image/upload/v1737550652/HOME-GENERAL.png');
+  background-image: url('../img/bg/bg-rutas.png');
   background-size: cover;
   background-color:var(--color-secondary);
   width: 100%;

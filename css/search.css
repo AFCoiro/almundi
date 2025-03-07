@@ -51,7 +51,7 @@
 }
 
 .sectionCardsTrip-title{
-    background-image: url('https://images.almundo.com/205/image/fetch/fl_progressive,q_auto,c_fill,g_auto/https://almundo-com-res.cloudinary.com/image/upload/v1737550652/HOME-GENERAL.png');
+    background-image: url('../img/bg/bg-rutas.png');
 background-color: var(--color-primary);
 border-radius: 0 0 30px 30px;
 background-size: cover;
@@ -256,6 +256,7 @@ overflow: hidden; */
 /*LETRAS CHICAS LEGALES*/
 .letra-chica{
     max-width:1000px;
+    text-align: left;
 }
 .letra-chica h6{
     font-size: 16px;

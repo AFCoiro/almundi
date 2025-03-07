@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!validateForm()) {
       return; 
     }
-    form.submit();
+    form.submit();    
   });
   
 

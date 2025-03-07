@@ -1,6 +1,6 @@
-# <h1 align="center">almundi 🌎(work in progress)</h1> 
+# <h1 align="center">almundi 🌎</h1> 
 <br>
-
+![almundi home](img/almundi-readme.png)
 
 **Este sitio web fue desarrollado como parte de una entrega para Codo a Codo 4.0**, donde se requería implementar un proyecto utilizando únicamente **HTML, CSS y JavaScript**, sin frameworks ni preprocesadores. Tras completar la entrega y continuar el desarrollo en otro grupo, decidí mejorar este repositorio para que no quedara como un proyecto parcial e incompleto.  
 
