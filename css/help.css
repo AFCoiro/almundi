@@ -1,11 +1,9 @@
 /* Estilos para la sección usHero con video de fondo */
 .usHero {
   position: relative;
-  height: 85vh;
   width: 100%;
   text-align: center;
   overflow: hidden;
-  clip-path: ellipse(100% 100% at center top); /* Forma elíptica en la parte superior */
 }
 
 .usHero-video {
@@ -133,6 +131,12 @@ filter: invert(26%) sepia(99%) saturate(1693%) hue-rotate(356deg) brightness(105
   padding-bottom: 25px;
   pointer-events: auto; 
 }
+@media(max-width:600px){
+  .desplegable.active{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  }
+}
 .helpItemSubCont h4{
   color: var(--color-secondary);
 }
@@ -202,6 +206,11 @@ margin-bottom: 40px;
   justify-content: center;
   gap: 30px;
 }
+@media (max-width:840px){
+  .contCards {
+    flex-direction: column;
+  }
+}
 .contCards .cardsUs{
 padding:35px
 }
@@ -215,7 +224,11 @@ height: auto;
 .botonContacto{
 margin: 25px;
 }
-
+@media (max-width:600px){
+  .botonContacto{
+    margin: 0;
+    }
+}
 .cancelaciones{
   text-align: start;
 }
@@ -242,10 +255,4 @@ margin: 25px;
   gap: 1rem;
   margin-bottom: 15px;
 }
-@media (max-width:768) {
-  .usHero{
-    height: 60vh;
-    clip-path: none;
-  }
 
-  }

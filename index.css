@@ -901,6 +901,9 @@ text-align: center;
     height: 80px;
 }
 /* Flechas */
+.carousel-container {
+    position: relative;
+}
 .carousel-btn {
     position: absolute;
     top: 50%;

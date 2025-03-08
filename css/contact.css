@@ -9,6 +9,7 @@
 }
 .contect-hero{
   background-image: url("../../img/bg/bg-violet.jpg");
+  background-color: var(--color-secondary);
   background-size: cover;
   height: 150px;
   width: 100%;
@@ -243,6 +244,11 @@ fieldset .formInput:focus{
       background-color: var(--color-secondary);
       color: var(--color-white);
     }
+    .aviso {
+      background-color: #ffffff45;      
+      margin-left:0;
+      padding: 10px;
+    }
 }
 
 .cardWpp{
@@ -278,7 +284,7 @@ padding: 10px;
 }
 @media(max-width:768px){
     .cardWpp{
-        margin:30px;
+        margin:30px 30px 60px;
     }
   }
 
