@@ -133,7 +133,21 @@ font-size: 95px;
       } 
 }
 
+.animacion1, .animacion2 {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
 
+.animacion1.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animacion2.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 
 /*NAV---------------------------------------------------*/
@@ -530,8 +544,24 @@ box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
 .heroBanner{
     height: 85vh;
     width: auto;
-    clip-path: ellipse(100% 100% at center top);
+    clip-path: ellipse(100% 100% at center center);
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-center both;
+
+
 }
+
+@keyframes circle-in-center {
+    from {
+      clip-path: circle(0%);
+    }
+    to {
+      clip-path: circle(125%);
+    }
+  }
+  
+
+
+
 /* @media (min-width:1400px){
     /* .heroBanner{
         height: 85vh;
@@ -755,24 +785,52 @@ box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
     color: #ffffff;
     font-size: 40px;
     line-height: 1em;
+    position: relative; 
+    z-index: 20;
+
 }
-.secBackImg h3{
-    color: #ffffff;
-    /* margin-bottom: 10px; */
+
+.secBackImg h3 {
+    color: var(--color-white);
     font-size: 100px;
     letter-spacing: 6px;
     font-weight: 600;
+    position: relative; 
+    overflow: hidden; 
+    z-index: 20;
 }
+
+.secBackImg h3::before ,.secBackImg h2::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: var(--color-tertiary);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.secBackImg h3:hover::before,.secBackImg h2:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
 .listSocial{
     display:flex;
     flex-direction: row;
     justify-content: center;
     gap:1em;
 }
-.linkSocialImg{
+.linkSocialImg {
     width: 50px;
     filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(183deg) brightness(106%) contrast(101%);
 }
+
 @media (max-width: 1200px){
     .secBackImg{
         height:60vh;

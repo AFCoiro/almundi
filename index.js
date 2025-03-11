@@ -104,7 +104,24 @@ document.addEventListener("DOMContentLoaded", function () {
   updateCarousel();
 });
 
+/*ANIMACIONES DE TRANSICIÓN*/
 
+function animarScroll() {
+  const elementos = document.querySelectorAll('.animacion1, .animacion2');
+  const alturaPantalla = window.innerHeight;
+
+  elementos.forEach(el => {
+      const posicion = el.getBoundingClientRect().top;
+      
+      if (posicion < alturaPantalla - 100) { // Ajusta para que se active antes
+          el.classList.add('mostrar');
+      }
+  });
+}
+
+// Ejecutar al hacer scroll y al cargar la página
+window.addEventListener('scroll', animarScroll);
+window.addEventListener('load', animarScroll);
 
 // /*Login modal*/
 // document.addEventListener("click", (e) => {
