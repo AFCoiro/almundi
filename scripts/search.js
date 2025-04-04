@@ -14,7 +14,6 @@ async function ProcesarDatos() {
     const paquetesOrdenados = datosJ.sort((a, b) => a.precio - b.precio).slice(0, 6);
     fnMostrarPaises(paquetesOrdenados);
 
-    console.log("Paquetes más baratos:", paquetesOrdenados);
 
     // Agregar eventos a los botones de filtro
     document.getElementById("btnTodo").addEventListener("click", () => fnMostrarPaises(datosJ));
@@ -144,7 +143,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   btnContact.addEventListener('click', function () {
     localStorage.setItem('asunto',`Reserva de paquete a ${infoPaisesGuardados.nombre} el ${infoPaisesGuardados.salida}`);
-    console.log('asunto',`Reserva de paquete a ${infoPaisesGuardados.nombre} el ${infoPaisesGuardados.salida}`);
   });
 });
 
@@ -156,7 +154,6 @@ document.addEventListener('DOMContentLoaded', function () {
   if (storedAsunto) {
     asunto.value = storedAsunto;
     asunto.disabled ="disabled";
-    console.log(storedAsunto);
     localStorage.removeItem('asunto'); 
   }
 });
